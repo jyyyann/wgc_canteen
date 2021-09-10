@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+/*font-family: 'Bree Serif', serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+/*font-family: 'Satisfy', cursive;*/
+
+header{
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 30px;
+}
+
+a.page{
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 22px;
+    padding: 10px;
+}
+
+p.product{
+    font-size:40px;
+    font-family: 'Satisfy', cursive;
+}
+
+p.description{
+    color: grey;
+}
+
+div.about{
+    line-height: 1.6;
+}
+
+main{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+    font-family: 'Bree Serif', serif;
+}
+
+/*buttons*/
+input[type=submit]{
+    background: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 2px 2px;
+    border: solid 1.5px;
+}
+
+/*items in drop-down list*/
+.choice{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#container {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*browse page table
+ * this was adapted from a tutorial video by dcode on Youtube
+ * link here:
+ * https://youtu.be/biI9OFH6Nmg
+ */
+.content-table{
+    border-collapse: collapse;
+    min-width: 400px;
+}
+
+.content-table td{
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.content-table th,
+.content-table td{
+    padding: 12px 15px;
+}
+
+footer{
+    text-align: center;
+}

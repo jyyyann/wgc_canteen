@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+/*font-family: 'Bree Serif', serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+/*font-family: 'Oswald', sans-serif;*/
+
+body{
+    margin: 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main{
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+header{
+    background-color: lightblue;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    color: #183A54;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+div.container {
+    width: 70%;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+a.page{
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 22px;
+    color: #183A54;
+    padding: 10px;
+}
+
+a.page:hover{
+    color: #3BC5CC;
+}
+
+div.about-us{
+    line-height: 2;
+}
+
+.row{
+    display: flex;
+    text-align: center;
+}
+
+.box{
+    flex: 50%;
+    padding: 20px;
+    text-align:center;
+}
+
+h2{
+    font-family: 'Bree Serif', serif;
+    color: #183A54;
+}
+
+p.product {
+    font-family: 'Bree Serif', serif;
+    color: #183A54;
+    font-size: 22px;
+}
+
+/*buttons*/
+input[type=submit]{
+    background-color: white;
+    color: #183A54;
+    font-family: 'Montserrat', sans-serif;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 2px 2px;
+    border: solid 1.5px;
+}
+
+/*items in drop-down list*/
+.choice{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*browse page table
+ * this was adapted from a tutorial video by dcode on Youtube
+ * link here:
+ * https://youtu.be/biI9OFH6Nmg
+ */
+.content-table{
+    border-collapse: collapse;
+    min-width: 400px;
+}
+
+.content-table td{
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.content-table tr:nth-child(even){
+    background-color: #F7FBFF;
+}
+
+.content-table th,
+.content-table td{
+    text-align: left;
+    padding: 12px 15px;
+}
+
+a.menu-product{
+    color: #183A54;
+}
+
+a.menu-product:hover{
+    color: #3BC5CC;
+}
+
+footer{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: lightblue;
+    color: #183A54;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

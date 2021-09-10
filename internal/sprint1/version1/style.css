@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+/*font-family: 'Merriweather', serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+/*font-family: 'Bree Serif', serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+/*font-family: 'Noto Serif', serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+/*font-family: 'Raleway', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+/*font-family: 'Sacramento', cursive;*/
+
+header{
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    color: #668496;
+}
+
+main{
+    text-align: center;
+    color: #414D59;
+}
+
+body{
+    font-family: 'Noto Serif', serif;
+    color: #414D59;
+}
+
+.title{
+    font-family: 'Merriweather', serif;
+    font-size: 22px;}
+
+a.page{
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 22px;
+    padding: 10px;
+    color: #414D59;
+}
+
+input[type=submit]{
+    background: white;
+    color: #8C6A45;
+    font-family: 'Raleway', sans-serif;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 11px;
+    margin: 2px 2px;
+    border: solid 1.5px #8C6A45;
+}
+
+.choice{
+    font-family: 'Raleway', sans-serif;
+    color: grey;
+}
+
+p{
+    font-family: 'Noto Serif', serif;
+    color: #414D59;
+}
+
+#container{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Browse page table*/
+.content-table{
+    border-collapse: collapse;
+    min-width: 400px;
+}
+
+.content-table th{
+    background-color:  #668496;
+    color: white;
+}
+
+.content-table td{
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.content-table th,
+.content-table td{
+    padding: 12px 15px;
+}

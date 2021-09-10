@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+/*font-family: 'Sacramento', cursive;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+/*font-family: 'Bree Serif', serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+/*font-family: 'Noto Serif', serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+/*font-family: 'Raleway', sans-serif;*/
+
+main{
+    text-align: center;
+    color: #8C6A45;
+}
+
+body{
+    background-color: antiquewhite;
+    font-family: 'Noto Serif', serif;
+    color: #3F2F19;
+}
+
+header{
+    text-align: center;
+    font-family: 'Sacramento', cursive;
+    font-size: 25px;
+    color: #8C6A45;
+}
+
+a.page{
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 18px;
+    padding: 10px;
+    color: #D49E62;
+}
+
+input[type=submit]{
+    background: white;
+    color: #8C6A45;
+    font-family: 'Noto Serif', serif;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 11px;
+    margin: 2px 2px;
+    border: solid 1.5px #8C6A45;
+}
+
+.choice{
+    font-family: 'Raleway', sans-serif;
+    color: grey;
+}
+
+.title{
+    font-family: 'Sacramento', cursive;
+    font-size: 30px;
+}
+
+p{
+    font-family: 'Noto Serif', serif;
+    color: #3F2F19;
+}
+
+#container{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
