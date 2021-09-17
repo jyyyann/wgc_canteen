@@ -154,22 +154,21 @@ else {
             <input type="submit" name="submit" value="Search">
         </form>
 
-        <p> Click on the item to see more details!</p><br>
-
-        <!--menu table-->
-        <table align=center class='content-table'>
-            <tr>
-                <th> Product</th>
-                <th> Cost</th>
-                <th> Status</th>
-            </tr>
-
             <?php
             $count = mysqli_num_rows($result);
             if($count==0) {
-                echo "There was no search results!";
+                echo "<br>There was no search results!";
             }
             else{
+                echo"<!--menu table-->
+                <p> Click on the item to see more details!</p><br>
+                <table align=center class='content-table'>
+                    <tr>
+                        <th> Product</th>
+                        <th> Cost</th>
+                        <th> Status</th>
+                    </tr>";
+
                 while ($row=mysqli_fetch_array($result))
                 {
                     echo ' <tr> 
