@@ -59,7 +59,7 @@ $this_product_record=mysqli_fetch_assoc($this_product_result);
         <!--display of item's information-->
         <h2 class="title"> Item's Information</h2>
         <?php
-        echo "<p class='product'> Product: ".$this_product_record['product']. "<br>";
+        echo "<p> Product: ".$this_product_record['product']. "<br>";
         echo "<p> Description: ". $this_product_record['description']. "<br><br>";
         echo "<p> Category: ". $this_product_record['category']. "<br>";
         echo "<p> Cost: ". $this_product_record['cost']. "<br>";
@@ -92,11 +92,12 @@ $this_product_record=mysqli_fetch_assoc($this_product_result);
         <input type="submit" name="back_to_menu" value="Search another item">
     </form>
 </main>
-</body>
 
 <!--footer element-->
 <footer>
     <p> © 2021 Jasmine Yip All Rights Reserved</p>
 </footer>
+
+</body>
 
 </html>

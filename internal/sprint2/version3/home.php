@@ -4,8 +4,6 @@ if(mysqli_connect_errno()){
     echo "Failed to connect to MySQL:".mysqli_connect_error(); die();}
 ?>
 
-<!--testing testing-->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,7 +46,7 @@ if(mysqli_connect_errno()){
                 <!--this is adapted from a tutorial blog on Google Developers-->
                 <!--link here: https://developers.google.com/maps/documentation/javascript/adding-a-google-map-->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d749.6327979505278!2d174.78052865631437!3d-41.27554235643219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38ae2f27710d0d%3A0x2d0763d38f00974b!2sWellington%20Girls&#39;%20College!5e0!3m2!1sen!2snz!4v1597485828950!5m2!1sen!2snz"
-                        width="400" height="350" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        width="380" height="330" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
         </div>
 

@@ -77,11 +77,12 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
         ?>
     </div>
 </main>
-</body>
 
 <!--footer element-->
 <footer>
     <p> © 2021 Jasmine Yip All Rights Reserved</p>
 </footer>
+
+</body>
 
 </html>

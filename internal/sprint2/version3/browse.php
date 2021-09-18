@@ -117,7 +117,7 @@ else {
 
 <main>
     <div class="container">
-        <h2 class=title"> Find an item</h2>
+        <h2 class=title> Find an item</h2>
         <!--category form-->
         <form name='categories_form' id='categories_form' method = 'get' action ='browse.php' class="center">
             <select id='category' name='category' class='choice'>
@@ -126,7 +126,6 @@ else {
                 while($all_categories_record=mysqli_fetch_assoc($all_categories_result)){
                     echo"<option value='".$all_categories_record['category_id']."'>";
                     echo $all_categories_record['category'];
-                    echo"</option>";
                 }
                 ?>
             </select>
@@ -137,7 +136,7 @@ else {
         <!--drop-down list that provides options of sorting method, which then apply on the menu and refresh.-->
         <!--this was adapted from an article written by @Kamal Argarwal11 on geeksforgeeks-->
         <!--link here: https://www.geeksforgeeks.org/how-to-get-multiple-selected-values-of-select-box-in-php/-->
-        <form name='sorting_form' id='sorting_form'method='post' action='browse.php' class="center">
+        <form name='sorting_form' id='sorting_form' method='post' action='browse.php' class="center">
             <select name ='sortby' class='choice'>
                 <!--options-->
                 <option value = 'all_items'> All Items</option>
@@ -184,11 +183,13 @@ else {
         </table>
     </div>
 </main>
-</body>
 
 <!--footer element-->
 <footer>
     <p> © 2021 Jasmine Yip All Rights Reserved</p>
 </footer>
+
+</body>
+
 
 </html>
