@@ -68,12 +68,6 @@ h2{
     color: #183A54;
 }
 
-p.product {
-    font-family: 'Bree Serif', serif;
-    color: #183A54;
-    font-size: 22px;
-}
-
 /*buttons*/
 input[type=submit]{
     background-color: white;
@@ -123,6 +117,7 @@ a.menu-product{
 a.menu-product:hover{
     color: #3BC5CC;
 }
+
 
 footer{
     text-align: center;

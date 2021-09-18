@@ -17,7 +17,7 @@ if(mysqli_connect_errno()){
 <header>
     <!--header element-->
     <!--logo of wgc-->
-    <a href="https://ibb.co/MVcS3FP"><img src="https://i.ibb.co/MVcS3FP/wgclogo.png" width=150 height=150 alt="wgclogo" border="0"></a>
+    <a href="https://ibb.co/MVcS3FP"><img src="https://i.ibb.co/MVcS3FP/wgclogo.png" width=150 height=150 alt="wgclogo"></a>
     <h1> WGC CANTEEN </h1>
     <nav>
         <!--navigation tabs-->

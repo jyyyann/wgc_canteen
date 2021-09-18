@@ -104,7 +104,7 @@ else {
 <header>
     <!--header element-->
     <!--logo of wgc-->
-    <a href="https://ibb.co/MVcS3FP"><img src="https://i.ibb.co/MVcS3FP/wgclogo.png" width=150 height=150 alt="wgclogo" border="0"></a>
+    <a href="https://ibb.co/MVcS3FP"><img src="https://i.ibb.co/MVcS3FP/wgclogo.png" width=150 height=150 alt="wgclogo"></a>
     <h1> WGC CANTEEN </h1>
     <nav>
         <!--navigation tabs-->
@@ -120,6 +120,7 @@ else {
         <h2 class=title> Find an item</h2>
         <!--category form-->
         <form name='categories_form' id='categories_form' method = 'get' action ='browse.php' class="center">
+            <label for='category'></label>
             <select id='category' name='category' class='choice'>
                 <!--options-->
                 <?php
@@ -137,7 +138,8 @@ else {
         <!--this was adapted from an article written by @Kamal Argarwal11 on geeksforgeeks-->
         <!--link here: https://www.geeksforgeeks.org/how-to-get-multiple-selected-values-of-select-box-in-php/-->
         <form name='sorting_form' id='sorting_form' method='post' action='browse.php' class="center">
-            <select name ='sortby' class='choice'>
+            <label for='sorter'></label>
+            <select id='sorter' name ='sortby' class='choice'>
                 <!--options-->
                 <option value = 'all_items'> All Items</option>
                 <option value = 'cost_asc'> Cost Ascending</option>
@@ -153,13 +155,13 @@ else {
             <input type="submit" name="submit" value="Search">
         </form>
 
-            <?php
-            $count = mysqli_num_rows($result);
-            if($count==0) {
-                echo "<br>There was no search results!";
-            }
-            else{
-                echo"<!--menu table-->
+        <?php
+        $count = mysqli_num_rows($result);
+        if($count==0) {
+            echo "<br>There was no search results!";
+        }
+        else{
+            echo"<!--menu table-->
                 <p> Click on the item to see more details!</p><br>
                 <table align=center class='content-table'>
                     <tr>
@@ -168,9 +170,9 @@ else {
                         <th> Status</th>
                     </tr>";
 
-                while ($row=mysqli_fetch_array($result))
-                {
-                    echo ' <tr> 
+            while ($row=mysqli_fetch_array($result))
+            {
+                echo ' <tr> 
                     <!--clickable items that navigate to information page to display details of that chosen item-->
                     <!--this was adapted from am answer from Ali AlHajjow on stackoverflow-->
                     <!--link here: https://stackoverflow.com/questions/57936009/navigate-and-pass-values-to-another-page-in-php-html-->
@@ -178,8 +180,8 @@ else {
                     <td>'.$row['cost'].'</td>
                     <td>'.$row['status'].'</td>
                     </tr>';
-                }}
-            ?>
+            }}
+        ?>
         </table>
     </div>
 </main>
@@ -190,6 +192,4 @@ else {
 </footer>
 
 </body>
-
-
 </html>

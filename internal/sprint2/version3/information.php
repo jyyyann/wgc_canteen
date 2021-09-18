@@ -99,5 +99,4 @@ $this_product_record=mysqli_fetch_assoc($this_product_result);
 </footer>
 
 </body>
-
 </html>

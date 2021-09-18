@@ -34,7 +34,7 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
 <body>
 <header>
     <!--header element-->
-    <a href="https://ibb.co/MVcS3FP"><img src="https://i.ibb.co/MVcS3FP/wgclogo.png" width=150 height=150 alt="wgclogo" border="0"></a>
+    <a href="https://ibb.co/MVcS3FP"><img src="https://i.ibb.co/MVcS3FP/wgclogo.png" width=150 height=150 alt="wgclogo"></a>
     <h1> WGC CANTEEN </h1>
     <nav>
         <!--navigation tabs-->
@@ -51,7 +51,8 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
         <p> All Specials are 50% off on their respected day! </p>
         <!--specials form-->
         <form name='specials_form' id='specials_form' method = 'get' action ='specials.php' class="center">
-            <select id='specials' name='specials' class='choice'>
+            <label for='specials'></label>
+                <select id='specials' name='specials' class='choice'>
                 <!--options-->
                 <option value = 'MON'> Monday</option>
                 <option value = 'TUE'> Tuesday</option>
@@ -84,5 +85,4 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
 </footer>
 
 </body>
-
 </html>
