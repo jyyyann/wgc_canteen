@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
-/*font-family: 'Fira Sans', sans-serif;*/
+/*font-family: 'Fira Sans', sans-serif;*/ /*h1*/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+/*font-family: 'DM Sans', sans-serif;*/ /*h2*/
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-/*font-family: 'Montserrat', sans-serif;*/
+/*font-family: 'Montserrat', sans-serif;*/ /*p*/
 
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
-/*font-family: 'PT Sans', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+/*font-family: 'Josefin Sans', sans-serif;*/
 
 *{
     padding: 0;
@@ -62,7 +65,7 @@ header{
     color: #3BC5CC;
 }
 
-div.about-us, div.menu-content{
+div.about-us, div.menu-content, div.info{
     width: 60%;
     padding-top: 30px;
     padding-bottom: 60px;
@@ -72,16 +75,16 @@ div.about-us, div.menu-content{
 }
 
 h2{
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: bold;
     padding-top: 20px;
     padding-bottom: 10px;
 }
 
-p.about-us{
+p.about-us, p.info-content{
     font-family: 'Montserrat', sans-serif;
     line-height: 2.0;
-    font-size: 20px;
+    font-size: 18px;
     color: dimgray;
 }
 
@@ -89,24 +92,35 @@ div.menu{
     background-image: url(https://bit.ly/39hSlqT);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    padding-top: 30px;
+    padding-top: 50px;
     color: white;
     font-family: 'Fira Sans', sans-serif;
-    font-weight: 900;
 }
 
 p.menu{
     font-family: 'Montserrat', sans-serif;
     line-height: 2.0;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     padding-bottom: 20px;
 }
 
-div.info-content{
-    width: 40%;
+/*buttons*/
+input[type=submit]{
+    background: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 2px 2px;
+    border: solid 1.5px;
+    border-radius: 25px;
 }
 
-p.info{
-    text-align: left;
+/*items in drop-down list*/
+.choice{
+    font-family: 'Montserrat', sans-serif;
 }
+

@@ -4,4 +4,11 @@ if(mysqli_connect_errno()){
     echo "Failed to connect to MySQL:".mysqli_connect_error(); die();}
 ?>
 
-<p> This is the browse page.</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> WGC Canteen</title>
+    <meta charset="utf-8">
+    <link rel='stylesheet' type='text/css' href='style.css'>
+</head>
