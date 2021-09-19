@@ -1,16 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 /*font-family: 'Open Sans', sans-serif;*/
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+div.header-elements{
+    background-image: url(https://bit.ly/2VTk9yR);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+    font-size: 100px;
+}
+
 li, a{
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
+    color: white;
 }
 
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%
+    padding: 30px 10%;
 }
 
 .logo{

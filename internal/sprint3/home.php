@@ -14,24 +14,7 @@ if(mysqli_connect_errno()){
 </head>
 
 <body>
-    <div class="banner-area">
-        <div class="content-area">
-            <div class="contect">
-                <h1> WGC CANTEEN</h1>
-                <p> 8:30am - 2:00pm | MON - FRI</p>
-                <button class="menu"> SEE THE MENU</button>
-            </div>
-        </div>
-    </div>
-
-    <!--main area-->
-    <div class="container">
-        <div class="box">
-            <p>
-                welcome.
-            </p>
-        </div>
-    </div>
+<div class="header-elements">
 <header>
     <!--header element-->
     <!--this is adapted from a tutorial video on YouTube by Skillthrive-->
@@ -40,7 +23,6 @@ if(mysqli_connect_errno()){
     <a href="https://ibb.co/MVcS3FP">
         <img class="logo" src="https://i.ibb.co/MVcS3FP/wgclogo.png" width=100 height=100 alt="wgclogo">
     </a>
-
     <nav>
         <!--navigation tabs-->
         <ul class="nav_tag">
@@ -50,7 +32,9 @@ if(mysqli_connect_errno()){
         </ul>
     </nav>
 </header>
-
+    <h1> WGC CANTEEN</h1><br>
+    <h2> 8:30AM-2:00PM MON-FRI | CLOSED SAT & SUN</h2><br><br>
+</div>
 </body>
 </html>
 
