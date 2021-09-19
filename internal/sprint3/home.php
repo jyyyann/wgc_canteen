@@ -68,17 +68,12 @@ if(mysqli_connect_errno()){
                 width="600" height="400" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
 
         <h2> HOURS</h2>
-        <p class="info-content"> Monday: 8:30a.m.-2:00p.m.<br>
-        Tuesday: 8:30a.m.-2:00p.m.<br>
-        Wednesday: 8:30a.m.-2:00p.m.<br>
-        Thursday: 8:30a.m.-2:00p.m.<br>
-        Friday: 8:30a.m.-2:00p.m.<br>
-        Saturday: Closed<br>
-        Sunday: Closed<br><br>
+        <p class="info-content"> 8.30AM-2PM Mon-Fri<br>
+            Closed Sat & Sun
         </p>
 
         <h2> CONTACT</h2>
-        <p class="info-content"> Phone number: 021 0788 0831<br>
+        <p class="info-content"> Phone number: +64 021 0268 2889<br>
         Email: canteen@wgc.school.nz<br>
         Facebook: WGC Canteen<br>
         Instagram: @wgccanteen<br>
