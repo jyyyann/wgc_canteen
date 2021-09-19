@@ -1,27 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-/*font-family: 'Open Sans', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+/*font-family: 'Fira Sans', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+/*font-family: 'PT Sans', sans-serif;*/
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 div.header-elements{
-    background-image: url(https://bit.ly/2VTk9yR);
+    background-image: url(https://bit.ly/3tTl5Qi);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     color: white;
-    font-family: 'Open Sans', sans-serif;
 }
 
 h1{
-    font-size: 100px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
 }
 
 li, a{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     text-decoration: none;
     color: white;
 }
@@ -52,4 +60,53 @@ header{
 
 .nav_tag li a:hover{
     color: #3BC5CC;
+}
+
+div.about-us, div.menu-content{
+    width: 60%;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h2{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+p.about-us{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2.0;
+    font-size: 20px;
+    color: dimgray;
+}
+
+div.menu{
+    background-image: url(https://bit.ly/39hSlqT);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 30px;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 900;
+}
+
+p.menu{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2.0;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 20px;
+}
+
+div.info-content{
+    width: 40%;
+}
+
+p.info{
+    text-align: left;
 }

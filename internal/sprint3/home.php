@@ -33,8 +33,64 @@ if(mysqli_connect_errno()){
     </nav>
 </header>
     <h1> WGC CANTEEN</h1><br>
-    <h2> 8:30AM-2:00PM MON-FRI | CLOSED SAT & SUN</h2><br><br>
+    <h2> 8.30AM - 2PM MON-FRI | CLOSED SAT & SUN</h2><br><br>
 </div>
+
+<main>
+    <div class="about-us">
+        <h2> ABOUT US</h2>
+        <p class="about-us"> Welcome to Wellington Girls' College Canteen! We opened since the beginning of the century.
+            We strive to deliver quality food with reasonable price to our students. We update our menu frequently
+            to make sure we have got the most well-liked items for you all.
+            Check out our menu to see a wide range of food and drinks available. There has got to be something for you!</p>
+    </div>
+
+    <div class="menu">
+        <h1> MENU</h1>
+        <div class="menu-content">
+        <p class="menu"> Our menu fills with healthy and delicious food options,
+                perfect for breakfast, morning tea, lunch or even just a quick snack.</p>
+
+        <form method='post' action='menu.php'>
+            <!--category filters-->
+            <input type="submit" value="SEE OUR MENU">
+        </form>
+        </div>
+    </div>
+    <div class="info">
+        <h2> Our Location</h2>
+        <!--interactive google map-->
+        <!--this is adapted from a tutorial blog on Google Developers-->
+        <!--link here: https://developers.google.com/maps/documentation/javascript/adding-a-google-map-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d749.6327979505278!2d174.78052865631437!3d-41.27554235643219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38ae2f27710d0d%3A0x2d0763d38f00974b!2sWellington%20Girls&#39;%20College!5e0!3m2!1sen!2snz!4v1597485828950!5m2!1sen!2snz"
+                width="600" height="500" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+        <p class="info"> Pipitea Street, Thorndon, Wellington 6011</p>
+
+        <h2> Opening Hours</h2>
+        <p class="info-content"> Monday: 8:30a.m.-2:00p.m.<br>
+        Tuesday: 8:30a.m.-2:00p.m.<br>
+        Wednesday: 8:30a.m.-2:00p.m.<br>
+        Thursday: 8:30a.m.-2:00p.m.<br>
+        Friday: 8:30a.m.-2:00p.m.<br>
+        Saturday: Closed<br>
+        Sunday: Closed<br>
+        </p>
+
+        <h2> Contact Us</h2>
+        <p class="info-content"> Phone number: 021 0788 0831<br>
+        Email: canteen@wgc.school.nz<br>
+        Facebook: WGC Canteen<br>
+        Instagram: @wgccanteen<br>
+        </p>
+    </div>
+</main>
+
+<!--footer element-->
+<footer>
+    <p> © 2021 Jasmine Yip All Rights Reserved</p>
+</footer>
+
 </body>
 </html>
 
