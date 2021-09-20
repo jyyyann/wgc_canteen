@@ -5,20 +5,7 @@ if(mysqli_connect_errno()){
 ?>
 
 <?php
-if (isset($_GET['categories_button'])) {
-    if (isset($_GET['category'])) {
-        $id = $_GET['category'];
-    } else {
-        $id = "DR";
-    }
-    $this_category_query = "SELECT *
-    FROM products, statuses, categories
-    WHERE categories.category_id='" . $id . "'
-    AND products.status_id=statuses.status_id
-    AND products.category_id=categories.category_id";
-    $result = mysqli_query($con, $this_category_query);
-} /*sorting query*/
-elseif (isset($_POST['sorting_button'])) {
+if (isset($_POST['sorting_button'])) {
     if (isset($_POST['sortby'])) {
         $sort = $_POST['sortby'];
     } else {
