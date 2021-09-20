@@ -48,41 +48,6 @@ elseif(isset($_POST['snacks_only'])) {
     $result = mysqli_query($con, $snacks_only_query);
 }
 
-elseif(isset($_POST['all_items'])) {
-    $all_items_query = "SELECT * 
-    FROM products, statuses, categories
-    WHERE products.category_id=categories.category_id
-    AND products.status_id=statuses.status_id";
-    $result = mysqli_query($con, $all_items_query);
-}
-
-elseif(isset($_POST['cost_asc'])){
-    $cost_asc_query="SELECT * 
-    FROM products, statuses, categories
-    WHERE products.category_id=categories.category_id
-    AND products.status_id=statuses.status_id
-    ORDER BY products.cost ASC";
-    $result=mysqli_query($con, $cost_asc_query);
-}
-
-elseif(isset($_POST['cost_desc'])){
-    $cost_desc_query="SELECT * 
-    FROM products, statuses, categories
-    WHERE products.category_id=categories.category_id
-    AND products.status_id=statuses.status_id
-    ORDER BY products.cost DESC";
-    $result=mysqli_query($con, $cost_desc_query);
-}
-
-elseif(isset($_POST['available_only'])) {
-    $available_only_query = "SELECT * 
-    FROM products, statuses, categories 
-    WHERE products.status_id='A'
-    AND products.category_id=categories.category_id
-    AND products.status_id=statuses.status_id";
-    $result = mysqli_query($con, $available_only_query);
-}
-
 elseif(isset($_POST['search'])) {
     $search = $_POST['search'];
     $search_query = "SELECT *  
@@ -139,17 +104,21 @@ else{
 <main>
     <div id="container">
         <h2> Menu</h2>
-        <form method='post' action='browse.php'>
-            <!--category filters-->
+        <!--category tabs-->
+        <form method='post' action='drinks.php'>
             <input type="submit" name="drinks_only" value="Drinks">
+        </form>
+
+        <form method='post' action='sweets.php'>
             <input type="submit" name="sweets_only" value="Sweets">
+        </form>
+
+        <form method='post' action='savoury.php'>
             <input type="submit" name="savoury_only" value="Savoury">
-            <input type="submit" name="snacks_only" value="Snacks"><br>
-            <!--sorting filters-->
-            <input type="submit" name="all_items" value="All Items">
-            <input type="submit" name="cost_asc" value="Cost Ascending">
-            <input type="submit" name="cost_desc" value="Cost Descending">
-            <input type="submit" name="available_only" value="Available Only">
+        </form>
+
+        <form method='post' action='snacks.php'>
+            <input type="submit" name="snacks_only" value="Snacks">
         </form>
 
         <!--search bar-->
