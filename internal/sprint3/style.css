@@ -10,6 +10,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
 /*font-family: 'Josefin Sans', sans-serif;*/
 
+/*images*/
+/*sandwich: https://bit.ly/3kpnRcS*/
+/*fishchips: https://bit.ly/2XytH3d*/
+/*blueberrypie: https://bit.ly/3kp8Ojr*/
+
 *{
     padding: 0;
     margin: 0;
@@ -19,7 +24,7 @@
 }
 
 div.header-elements{
-    background-image: url(https://bit.ly/2XD89lK);
+    background-image: url(https://bit.ly/3kpnRcS);
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -94,7 +99,7 @@ p.about-us, p.info-content{
 }
 
 div.menu{
-    background-image: url(https://bit.ly/3AoIhZf);
+    background-image: url(https://bit.ly/3kp8Ojr);
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
     background-repeat: no-repeat;
     -webkit-background-size: cover;
