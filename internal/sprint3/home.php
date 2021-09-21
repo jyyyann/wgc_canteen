@@ -14,7 +14,7 @@ if(mysqli_connect_errno()){
 </head>
 
 <body>
-<div class="header-elements">
+<div class="home-header">
 <header>
     <!--header element-->
     <!--this is adapted from a tutorial video on YouTube by Skillthrive-->
@@ -34,7 +34,6 @@ if(mysqli_connect_errno()){
 </header>
 
     <h1> WGC CANTEEN</h1><br>
-    <h2> 8.30AM - 2PM MON-FRI</h2><br><br>
 </div>
 
 <main>
@@ -48,12 +47,12 @@ if(mysqli_connect_errno()){
 
     <div class="menu">
         <h1> MENU</h1>
-        <p> Our menu fills with healthy and delicious food options,
-                perfect for breakfast, morning tea, lunch or even just a quick snack.</p>
+        <p class="p2"> Our menu fills with healthy and delicious food options,
+                perfect for breakfast, morning tea, lunch or even just a quick snack.</p><br>
 
         <form method='post' action='browse.php'>
             <!--category filters-->
-            <input type="submit" value="SEE OUR MENU">
+            <input class="button2" type="submit" value="SEE OUR MENU">
         </form>
     </div>
 
@@ -66,7 +65,7 @@ if(mysqli_connect_errno()){
                 width="600" height="400" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
 
         <h2> HOURS</h2>
-        <p class="info-content"> 8.30AM-2PM Mon-Fri<br>
+        <p> 8.30AM-2PM Mon-Fri<br>
             Closed Sat & Sun
         </p>
 

@@ -78,7 +78,7 @@ else{
 </head>
 
 <body>
-<div class="header-elements">
+<div class="browse-header">
     <header>
         <!--header element-->
         <!--this is adapted from a tutorial video on YouTube by Skillthrive-->
@@ -98,33 +98,32 @@ else{
     </header>
 
     <h1> MENU</h1><br>
-    <h2> HOURS / 8.30AM - 2PM MON - FRI</h2><br><br>
 </div>
 
 <main>
-        <h2> Menu</h2>
+        <h2> MENU</h2>
         <!--category tabs-->
-        <form class="filter-buttons" method='post' action='drinks.php'>
-            <input type="submit" name="drinks_only" value="Drinks">
+        <form class="menu-fil" method='post' action='drinks.php'>
+            <input class="button1" type="submit" name="drinks_only" value="Drinks">
         </form>
 
-        <form class="filter-buttons" method='post' action='sweets.php'>
-            <input type="submit" name="sweets_only" value="Sweets">
+        <form class="menu-fil" method='post' action='sweets.php'>
+            <input class="button1" type="submit" name="sweets_only" value="Sweets">
         </form>
 
-        <form class="filter-buttons" method='post' action='savoury.php'>
-            <input type="submit" name="savoury_only" value="Savoury">
+        <form class="menu-fil" method='post' action='savoury.php'>
+            <input class="button1" type="submit" name="savoury_only" value="Savoury">
         </form>
 
-        <form class="filter-buttons" method='post' action='snacks.php'>
-            <input type="submit" name="snacks_only" value="Snacks">
+        <form class="menu-fil" method='post' action='snacks.php'>
+            <input class="button1" type="submit" name="snacks_only" value="Snacks">
         </form>
 
         <!--search bar-->
-        <h2 class="title"> Search an item</h2>
+        <h2 class="title"> SEARCH</h2>
         <form action="browse.php" method="post">
-            <input type="text" name='search'>
-            <input type="submit" name="submit" value="Search">
+            <input class="searchbox" type="text" name='search'>
+            <input class="searchlens" type="submit" name="submit">
         </form><br>
 
             <?php

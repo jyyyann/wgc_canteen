@@ -37,6 +37,7 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
 </head>
 
 <body>
+<div class="specials-header">
     <header>
         <!--header element-->
         <!--this is adapted from a tutorial video on YouTube by Skillthrive-->
@@ -54,11 +55,11 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
             </ul>
         </nav>
     </header>
-
-    <h1> SPECIALS</h1>
+    <h1> SPECIALS</h1><br>
+    </div>
 
 <main>
-    <h2> Weekly Specials</h2>
+    <h2> WEEKLY SPECIALS </h2>
     <div class="specials">
         <p> All Specials are 50% off on their respected day!</p>
         <!--specials form-->
@@ -72,7 +73,7 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
                 <option value = 'THU'> Thursday</option>
                 <option value = 'FRI'> Friday</option>
             </select>
-            <input type='submit' name='specials_button' value='Show me the specials information'>
+            <input class="button1" type='submit' name='specials_button' value='Show me the specials information'>
         </form>
 
         <?php
