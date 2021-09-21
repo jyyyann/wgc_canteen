@@ -37,7 +37,6 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
 </head>
 
 <body>
-<div class="header-elements">
     <header>
         <!--header element-->
         <!--this is adapted from a tutorial video on YouTube by Skillthrive-->
@@ -56,9 +55,7 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
         </nav>
     </header>
 
-    <h1> SPECIALS</h1><br>
-    <h2> MON-FRI</h2><br><br>
-</div>
+    <h1> SPECIALS</h1>
 
 <main>
     <h2> Weekly Specials</h2>

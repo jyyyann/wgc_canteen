@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
-/*font-family: 'Fira Sans', sans-serif;*/ /*h1*/
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
 /*font-family: 'DM Sans', sans-serif;*/ /*h2*/
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 /*font-family: 'Montserrat', sans-serif;*/ /*p*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+/*font-family: 'Open Sans', sans-serif;*/
 
 
 *{
@@ -24,20 +24,21 @@
     background-position: center;
     position: relative;
     color: white;
-    font-family: 'Fira Sans', sans-serif;
 }
 
 h1{
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 80px;
     font-weight: 700;
 }
 
+/*
 li, a{
     font-family: 'Fira Sans', sans-serif;
     text-decoration: none;
     color: white;
 }
+*/
 
 header{
     display: flex;
@@ -50,13 +51,13 @@ header{
     cursor: pointer;
 }
 
-.nav_tag{
-    list-style: none;
-}
-
 .nav_tag li{
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
     display: inline-block;
     padding: 0px 20px;
+    color: white;
 }
 
 .nav_tag li a{
@@ -76,7 +77,7 @@ header{
 }
 
 h2{
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     padding-top: 20px;
     padding-bottom: 10px;

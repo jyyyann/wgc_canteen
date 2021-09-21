@@ -78,7 +78,6 @@ if(mysqli_connect_errno()){
         </p>
     </div>
 </main>
-
 <!--footer element-->
 <footer>
     <p> © 2021 Jasmine Yip All Rights Reserved</p>
