@@ -28,36 +28,36 @@ else{
 <!DOCTYPE html>
 <html lang="en">
 <main>
-<head>
-    <title> WGC Canteen</title>
-    <meta charset="utf-8">
-    <link rel='stylesheet' type='text/css' href='style.css'>
-</head>
+    <head>
+        <title> WGC Canteen</title>
+        <meta charset="utf-8">
+        <link rel='stylesheet' type='text/css' href='style.css'>
+    </head>
 
     <body>
-<div class="browse-header">
-    <header>
-        <!--header element-->
-        <!--this is adapted from a tutorial video on YouTube by Skillthrive-->
-        <!--link here: https://www.youtube.com/watch?v=PwWHL3RyQgk-->
-        <!--logo of wgc-->
-        <a href="https://ibb.co/MVcS3FP">
-            <img class="logo" src="https://i.ibb.co/MVcS3FP/wgclogo.png" width=100 height=100 alt="wgclogo">
-        </a>
-        <nav>
-            <!--navigation tabs-->
-            <ul class="nav_tag">
-                <li><a class='page' href='home.php'> HOME</a></li>
-                <li><a class='page' href='specials.php'> SPECIALS</a></li>
-                <li><a class='page' href='browse.php'> MENU</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="browse-header">
+        <header>
+            <!--header element-->
+            <!--this is adapted from a tutorial video on YouTube by Skillthrive-->
+            <!--link here: https://www.youtube.com/watch?v=PwWHL3RyQgk-->
+            <!--logo of wgc-->
+            <a href="https://ibb.co/MVcS3FP">
+                <img class="logo" src="https://i.ibb.co/MVcS3FP/wgclogo.png" width=100 height=100 alt="wgclogo">
+            </a>
+            <nav>
+                <!--navigation tabs-->
+                <ul class="nav_tag">
+                    <li><a class='page' href='home.php'> HOME</a></li>
+                    <li><a class='page' href='specials.php'> SPECIALS</a></li>
+                    <li><a class='page' href='browse.php'> MENU</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <h1> MENU</h1><br>
-</div>
+        <h1> MENU</h1><br>
+    </div>
 
-<main>
+    <main>
         <h2> CATERGORIES</h2>
         <!--category tabs-->
         <form class="menu-fil" method='post' action='drinks.php'>
@@ -83,13 +83,13 @@ else{
             <input class="searchlens" type="submit" name="submit">
         </form><br>
 
-            <?php
-            $count = mysqli_num_rows($result);
-            if($count==0) {
-                echo "There was no search results!";
-            }
-            else{
-                echo"<!--menu table-->
+        <?php
+        $count = mysqli_num_rows($result);
+        if($count==0) {
+            echo "There was no search results!";
+        }
+        else{
+            echo"<!--menu table-->
                 <p> Click on the item to see more details!</p><br>
                 <table class='content-table'>
                     <tr>
@@ -99,9 +99,9 @@ else{
                         <th> Rating</th>
                     </tr>";
 
-                while ($row=mysqli_fetch_array($result))
-                {
-                    echo ' <tr> 
+            while ($row=mysqli_fetch_array($result))
+            {
+                echo ' <tr> 
                     <!--clickable items that navigate to information page to display details of that chosen item-->
                     <!--this was adapted from am answer from Ali AlHajjow on stackoverflow-->
                     <!--link here: https://stackoverflow.com/questions/57936009/navigate-and-pass-values-to-another-page-in-php-html-->
@@ -110,15 +110,15 @@ else{
                     <td>'.$row['status'].'</td>
                     <td>'.$row['popularities'].'</td>
                     </tr>';
-                }}
-            ?>
+            }}
+        ?>
         </table>
-</main>
+    </main>
 
-<!--footer element-->
-<footer>
-    <p> © 2021 Jasmine Yip All Rights Reserved</p>
-</footer>
+    <!--footer element-->
+    <footer>
+        <p> © 2021 Jasmine Yip All Rights Reserved</p>
+    </footer>
 
     </body>
 </html>

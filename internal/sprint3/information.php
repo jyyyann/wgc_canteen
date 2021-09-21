@@ -5,14 +5,19 @@ if(mysqli_connect_errno()){
 ?>
 
 <?php
+/*product query*/
+/*SELECT product_id FROM products*/
+$all_products_query="SELECT product_id, product FROM products";
+$all_products_result=mysqli_query($con, $all_products_query);
+
 if(isset($_GET['product_id'])){
     $id=$_GET['product_id'];
-}else {
-    $id = 'AFG';
+}else{
+    $id='AFG';
 }
 
 $this_product_query="SELECT *
-FROM products, statuses, categories,popularities, vegans, gfs, nfs
+FROM products, statuses, categories,vegans, gfs, nfs
 WHERE products.product_id='".$id."'
 AND products.status_id=statuses.status_id
 AND products.category_id=categories.category_id
@@ -25,44 +30,43 @@ $this_product_record=mysqli_fetch_assoc($this_product_result);
 
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+    <title> WGC Canteen</title>
+    <meta charset="utf-8">
+    <link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+
+<body>
+<div class="info-header">
+<header>
+    <!--header element-->
+    <!--logo of wgc-->
+    <a href="https://ibb.co/MVcS3FP"><img src="https://i.ibb.co/MVcS3FP/wgclogo.png" width=150 height=150 alt="wgclogo" border="0"></a>
+    <nav>
+        <!--navigation tabs-->
+        <ul class="nav_tag">
+            <li><a class='page' href='home.php'> HOME</a></li>
+            <li><a class='page' href='specials.php'> SPECIALS</a></li>
+            <li><a class='page' href='browse.php'> MENU</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <h1>INFO</h1><br>
+</div>
+
 <main>
-    <head>
-        <title> WGC Canteen</title>
-        <meta charset="utf-8">
+    <div class="container">
         <link rel='stylesheet' type='text/css' href='style.css'>
-    </head>
-
-    <body>
-    <div class="browse-header">
-        <header>
-            <!--header element-->
-            <!--this is adapted from a tutorial video on YouTube by Skillthrive-->
-            <!--link here: https://www.youtube.com/watch?v=PwWHL3RyQgk-->
-            <!--logo of wgc-->
-            <a href="https://ibb.co/MVcS3FP">
-                <img class="logo" src="https://i.ibb.co/MVcS3FP/wgclogo.png" width=100 height=100 alt="wgclogo">
-            </a>
-            <nav>
-                <!--navigation tabs-->
-                <ul class="nav_tag">
-                    <li><a class='page' href='home.php'> HOME</a></li>
-                    <li><a class='page' href='specials.php'> SPECIALS</a></li>
-                    <li><a class='page' href='browse.php'> MENU</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <h1> INFO</h1><br>
-    </div>
-
-    <main>
+        <!--display of item's information-->
         <h2> ITEM'S INFO</h2>
         <?php
         echo "<p> Product: ".$this_product_record['product']. "<br>";
         echo "<p> Description: ". $this_product_record['description']. "<br><br>";
         echo "<p> Category: ". $this_product_record['category']. "<br>";
         echo "<p> Cost: ". $this_product_record['cost']. "<br>";
-        echo "<p> Popularity: ". $this_product_record['popularity']. "<br>";
+        echo "<p> Popularity: ". $this_product_record['popularities']. "<br>";
         echo "<p> Status: ". $this_product_record['status']. "<br><br>";
         ?>
 
@@ -84,19 +88,18 @@ $this_product_record=mysqli_fetch_assoc($this_product_result);
                    </tr>';
             ?>
         </table>
-        </div>
-        <br>
-        <form method='post' action='browse.php'>
-            <!--category filters-->
-            <input class="button1" type="submit" name="back_to_menu" value="Back to menu">
-        </form>
-    </main>
+    </div>
+    <br>
+    <form method='post' action='browse.php'>
+        <!--category filters-->
+        <input class="button1" type="submit" name="back_to_menu" value="Search another item">
+    </form>
+</main>
 
-    <!--footer element-->
-    <footer>
-        <p> © 2021 Jasmine Yip All Rights Reserved</p>
-    </footer>
+<!--footer element-->
+<footer>
+    <p> © 2021 Jasmine Yip All Rights Reserved</p>
+</footer>
 
-    </body>
+</body>
 </html>
-

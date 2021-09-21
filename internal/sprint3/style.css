@@ -39,7 +39,11 @@
     background-image: url("img/coffee.jpg");
 }
 
-.home-header, .menu, .specials-header, .browse-header, .drinks-header{
+.info-header{
+    background-image: url("");
+}
+
+.home-header, .menu, .specials-header, .browse-header, .drinks-header. .info-header{
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
     background-repeat: no-repeat;
     background-size: cover;
@@ -210,10 +214,6 @@ a.menu-product:hover{
     border : none;
     color : transparent;
     font-size : 0
-}
-
-.searchlens:hover{
-    background:url('img/maglens2.jpg') no-repeat 0 -20px;
 }
 
 .searchbox{
