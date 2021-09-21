@@ -8,11 +8,11 @@ if(mysqli_connect_errno()){
 /*specials query*/
 /*broken fix it*/
 if(empty($_GET['specials'])){
-    if ('str_split(strtoupper(strftime(%a)))'=='SAT' or 'SUN'){
+    if ('strftime(%a)'=='SAT' or 'SUN'){
     $id='MON';}
 
-    elseif ('str_split(strtoupper(strftime(%a)))'!='SAT' or 'SUN'){
-        $id='str_split(strtoupper(strftime(%a)))';}
+    elseif ('strftime(%a)'!='SAT' or 'SUN'){
+        $id='strftime(%a)';}
 }
 elseif(isset($_GET['specials'])){
         $id=$_GET['specials'];}
@@ -29,7 +29,6 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title> WGC Canteen</title>
     <meta charset="utf-8">

@@ -5,50 +5,7 @@ if(mysqli_connect_errno()){
 ?>
 
 <?php
-/*
- * filters and search bar
- * custom query to sort items
- * this was adapted from a tutorial video from 1BestCsharp blog on Youtube
- * link here:
- * https://youtu.be/2XuxFi85GTw
- */
-if(isset($_POST['drinks_only'])) {
-    $drinks_only_query = "SELECT * 
-    FROM products, statuses, categories 
-    WHERE products.category_id='DR'
-    AND products.category_id=categories.category_id
-    AND products.status_id=statuses.status_id";
-    $result = mysqli_query($con, $drinks_only_query);
-}
-
-elseif(isset($_POST['sweets_only'])) {
-    $sweets_only_query = "SELECT * 
-    FROM products, statuses, categories 
-    WHERE products.category_id='SW'
-    AND products.category_id=categories.category_id
-    AND products.status_id=statuses.status_id";
-    $result = mysqli_query($con, $sweets_only_query);
-}
-
-elseif(isset($_POST['savoury_only'])) {
-    $savoury_only_query = "SELECT * 
-    FROM products, statuses, categories 
-    WHERE products.category_id='SV'
-    AND products.category_id=categories.category_id
-    AND products.status_id=statuses.status_id";
-    $result = mysqli_query($con, $savoury_only_query);
-}
-
-elseif(isset($_POST['snacks_only'])) {
-    $snacks_only_query = "SELECT * 
-    FROM products, statuses, categories 
-    WHERE products.category_id='SN'
-    AND products.category_id=categories.category_id
-    AND products.status_id=statuses.status_id";
-    $result = mysqli_query($con, $snacks_only_query);
-}
-
-elseif(isset($_POST['search'])) {
+if(isset($_POST['search'])) {
     $search = $_POST['search'];
     $search_query = "SELECT *  
     FROM products, statuses, categories
@@ -70,14 +27,14 @@ else{
 
 <!DOCTYPE html>
 <html lang="en">
-
+<main>
 <head>
     <title> WGC Canteen</title>
     <meta charset="utf-8">
     <link rel='stylesheet' type='text/css' href='style.css'>
 </head>
 
-<body>
+    <body>
 <div class="browse-header">
     <header>
         <!--header element-->
@@ -101,7 +58,7 @@ else{
 </div>
 
 <main>
-        <h2> MENU</h2>
+        <h2> CATERGORIES</h2>
         <!--category tabs-->
         <form class="menu-fil" method='post' action='drinks.php'>
             <input class="button1" type="submit" name="drinks_only" value="Drinks">
@@ -134,11 +91,12 @@ else{
             else{
                 echo"<!--menu table-->
                 <p> Click on the item to see more details!</p><br>
-                <table align=center class='content-table'>
+                <table class='content-table'>
                     <tr>
                         <th> Product</th>
                         <th> Cost</th>
                         <th> Status</th>
+                        <th> Rating</th>
                     </tr>";
 
                 while ($row=mysqli_fetch_array($result))
@@ -150,15 +108,17 @@ else{
                     <td><a class="menu-product" href=information.php?product_id='.$row['product_id'].'>'.$row['product'].'</a></td>
                     <td>'.$row['cost'].'</td>
                     <td>'.$row['status'].'</td>
+                    <td>'.$row['popularities'].'</td>
                     </tr>';
                 }}
             ?>
         </table>
-    </div>
 </main>
-</body>
 
 <!--footer element-->
 <footer>
     <p> © 2021 Jasmine Yip All Rights Reserved</p>
 </footer>
+
+    </body>
+</html>
