@@ -5,20 +5,7 @@ if(mysqli_connect_errno()){
 ?>
 
 <?php
-if (isset($_GET['categories_button'])) {
-    if (isset($_GET['category'])) {
-        $id = $_GET['category'];
-    } else {
-        $id = "SV";
-    }
-    $this_category_query = "SELECT *
-    FROM products, statuses, categories
-    WHERE categories.category_id='" . $id . "'
-    AND products.status_id=statuses.status_id
-    AND products.category_id=categories.category_id";
-    $result = mysqli_query($con, $this_category_query);
-} /*sorting query*/
-elseif (isset($_POST['sorting_button'])) {
+if (isset($_POST['sorting_button'])) {
     if (isset($_POST['sortby'])) {
         $sort = $_POST['sortby'];
     } else {
@@ -126,7 +113,7 @@ else {
 <!--drop-down list that provides options of sorting method, which then apply on the menu and refresh.-->
 <!--this was adapted from an article written by @Kamal Argarwal11 on geeksforgeeks-->
 <!--link here: https://www.geeksforgeeks.org/how-to-get-multiple-selected-values-of-select-box-in-php/-->
-<form name='sorting_form' id='sorting_form' method='post' action='drinks.php' class="center">
+<form name='sorting_form' id='sorting_form' method='post' action='savoury.php' class="center">
     <label for='sorter'></label>
     <select id='sorter' name ='sortby' class='choice'>
         <!--options-->
@@ -139,7 +126,7 @@ else {
 </form><br>
 
 <!--search bar-->
-<form action="drinks.php" method="post">
+<form action="savoury.php" method="post">
     <input type="text" name='search'>
     <input type="submit" name="submit" value="Search">
 </form>

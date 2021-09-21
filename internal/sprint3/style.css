@@ -23,16 +23,15 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-div.header-elements{
-    background-image: url(https://bit.ly/3kpnRcS);
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .4);
+.header-elements{
+    background-image: url("img/sandwich.jpg");
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    background-position: center;
+    position: relative;
     color: white;
-    display: block;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 h1{
@@ -102,10 +101,9 @@ div.menu{
     background-image: url(https://bit.ly/3kp8Ojr);
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    background-position: center;
+    position: relative;
     padding-top: 50px;
     color: white;
     font-family: 'Fira Sans', sans-serif;
@@ -128,3 +126,48 @@ div.specials{
     width: 80%;
     padding-top: 30px;
 }
+
+/*browse page table
+ * this was adapted from a tutorial video by dcode on Youtube
+ * link here:
+ * https://youtu.be/biI9OFH6Nmg
+ */
+.content-table{
+    border-collapse: collapse;
+    min-width: 400px;
+}
+
+.content-table td{
+    border-bottom: 1px solid #DDDDDD;
+}
+
+/*alternating row color*/
+.content-table tr:nth-child(even){
+    background-color: EDEDED;
+}
+
+.content-table th,
+.content-table td{
+    text-align: left;
+    padding: 12px 15px;
+}
+
+a.menu-product{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+a.menu-product:hover{
+    color: dimgrey;
+    }
+
+
+footer{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: lightgrey;
+    color: #183A54;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+

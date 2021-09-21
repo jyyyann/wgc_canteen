@@ -145,10 +145,13 @@ else{
                 while ($row=mysqli_fetch_array($result))
                 {
                     echo ' <tr> 
-                   <td>'.$row['product'].'</td>
-                   <td>'.$row['cost'].'</td>
-                   <td>'.$row['status'].'</td>
-                   </tr>';
+                    <!--clickable items that navigate to information page to display details of that chosen item-->
+                    <!--this was adapted from am answer from Ali AlHajjow on stackoverflow-->
+                    <!--link here: https://stackoverflow.com/questions/57936009/navigate-and-pass-values-to-another-page-in-php-html-->
+                    <td><a class="menu-product" href=information.php?product_id='.$row['product_id'].'>'.$row['product'].'</a></td>
+                    <td>'.$row['cost'].'</td>
+                    <td>'.$row['status'].'</td>
+                    </tr>';
                 }}
             ?>
         </table>

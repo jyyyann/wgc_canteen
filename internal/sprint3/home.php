@@ -21,7 +21,7 @@ if(mysqli_connect_errno()){
     <!--link here: https://www.youtube.com/watch?v=PwWHL3RyQgk-->
     <!--logo of wgc-->
     <a href="https://ibb.co/MVcS3FP">
-        <img class="logo" src="https://i.ibb.co/MVcS3FP/wgclogo.png" width=100 height=100 alt="wgclogo">
+        <img class="logo" src="img/wgclogo.png" width=100 height=100 alt="wgclogo">
     </a>
     <nav>
         <!--navigation tabs-->
