@@ -102,22 +102,21 @@ else{
 </div>
 
 <main>
-    <div id="container">
         <h2> Menu</h2>
         <!--category tabs-->
-        <form method='post' action='drinks.php'>
+        <form class="filter-buttons" method='post' action='drinks.php'>
             <input type="submit" name="drinks_only" value="Drinks">
         </form>
 
-        <form method='post' action='sweets.php'>
+        <form class="filter-buttons" method='post' action='sweets.php'>
             <input type="submit" name="sweets_only" value="Sweets">
         </form>
 
-        <form method='post' action='savoury.php'>
+        <form class="filter-buttons" method='post' action='savoury.php'>
             <input type="submit" name="savoury_only" value="Savoury">
         </form>
 
-        <form method='post' action='snacks.php'>
+        <form class="filter-buttons" method='post' action='snacks.php'>
             <input type="submit" name="snacks_only" value="Snacks">
         </form>
 
@@ -126,15 +125,7 @@ else{
         <form action="browse.php" method="post">
             <input type="text" name='search'>
             <input type="submit" name="submit" value="Search">
-        </form>
-
-        <!--menu table-->
-        <table align=center class='content-table'>
-            <tr>
-                <th> Product</th>
-                <th> Cost</th>
-                <th> Status</th>
-            </tr>
+        </form><br>
 
             <?php
             $count = mysqli_num_rows($result);
@@ -142,6 +133,15 @@ else{
                 echo "There was no search results!";
             }
             else{
+                echo"<!--menu table-->
+                <p> Click on the item to see more details!</p><br>
+                <table align=center class='content-table'>
+                    <tr>
+                        <th> Product</th>
+                        <th> Cost</th>
+                        <th> Status</th>
+                    </tr>";
+
                 while ($row=mysqli_fetch_array($result))
                 {
                     echo ' <tr> 

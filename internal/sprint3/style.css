@@ -7,13 +7,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 /*font-family: 'Montserrat', sans-serif;*/ /*p*/
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
-/*font-family: 'Josefin Sans', sans-serif;*/
-
-/*images*/
-/*sandwich: https://bit.ly/3kpnRcS*/
-/*fishchips: https://bit.ly/2XytH3d*/
-/*blueberrypie: https://bit.ly/3kp8Ojr*/
 
 *{
     padding: 0;
@@ -74,7 +67,7 @@ header{
     color: #3BC5CC;
 }
 
-div.about-us, div.menu-content, div.info, div.specials{
+.about-us, .menu-content, .info, .specials{
     width: 80%;
     padding-top: 30px;
     padding-bottom: 60px;
@@ -89,15 +82,21 @@ h2{
     padding-bottom: 10px;
 }
 
-p.about-us, p.info-content, .specials{
+p.about-us, p.info-content,{
     font-family: 'Montserrat', sans-serif;
     line-height: 2.0;
     font-size: 18px;
     color: dimgray;
 }
 
-div.menu{
-    background-image: url(https://bit.ly/3kp8Ojr);
+.specials{
+    line-height: 2.0;
+    font-size: 18px;
+}
+
+
+.menu{
+    background-image: url("img/blueberrypie-2.jpg");
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
     background-repeat: no-repeat;
     background-size: cover;
@@ -158,19 +157,25 @@ a.menu-product{
 }
 
 a.menu-product:hover{
-    color: dimgrey;
+    color: #DDDDDD;
     }
+
+.filter-buttons{
+    display: inline-block;
+}
 
 /*buttons*/
 input[type=submit]{
-    color: red;
+    background-color: transparent;
+    color: black;
     font-family: 'Montserrat', sans-serif;
-    padding: 3px;
+    padding: 6px 10px 6px 10px;
     text-align: center;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 16px;
     margin: 2px 2px;
-    border: solid 1.5px;
+    border: solid 1px;
+    border-radius: 16px;
 }
 
 footer{

@@ -109,6 +109,7 @@ else {
     <h2> HOURS / 8.30AM - 2PM MON - FRI</h2><br><br>
 </div>
 
+<h2> Snacks</h2>
 <!--sorting form-->
 <!--drop-down list that provides options of sorting method, which then apply on the menu and refresh.-->
 <!--this was adapted from an article written by @Kamal Argarwal11 on geeksforgeeks-->
@@ -129,36 +130,41 @@ else {
 <form action="snacks.php" method="post">
     <input type="text" name='search'>
     <input type="submit" name="submit" value="Search">
-</form>
+</form><br>
 
 <!--return to menu-->
 <form action="browse.php" method="post">
     <input type="submit" name="submit" value="Back to menu">
-</form>
+</form><br>
 
 <!--menu table-->
-<table align=center class='content-table'>
-    <tr>
-        <th> Product</th>
-        <th> Cost</th>
-        <th> Status</th>
-    </tr>
+<?php
+$count = mysqli_num_rows($result);
+if($count==0) {
+    echo "There was no search results!";
+}
+else{
+    echo"<!--menu table-->
+                <p> Click on the item to see more details!</p><br>
+                <table align=center class='content-table'>
+                    <tr>
+                        <th> Product</th>
+                        <th> Cost</th>
+                        <th> Status</th>
+                    </tr>";
 
-    <?php
-    $count = mysqli_num_rows($result);
-    if($count==0) {
-        echo "There was no search results!";
-    }
-    else{
-        while ($row=mysqli_fetch_array($result))
-        {
-            echo ' <tr> 
-                   <td>'.$row['product'].'</td>
-                   <td>'.$row['cost'].'</td>
-                   <td>'.$row['status'].'</td>
-                   </tr>';
-        }}
-    ?>
+    while ($row=mysqli_fetch_array($result))
+    {
+        echo ' <tr> 
+                    <!--clickable items that navigate to information page to display details of that chosen item-->
+                    <!--this was adapted from am answer from Ali AlHajjow on stackoverflow-->
+                    <!--link here: https://stackoverflow.com/questions/57936009/navigate-and-pass-values-to-another-page-in-php-html-->
+                    <td><a class="menu-product" href=information.php?product_id='.$row['product_id'].'>'.$row['product'].'</a></td>
+                    <td>'.$row['cost'].'</td>
+                    <td>'.$row['status'].'</td>
+                    </tr>';
+    }}
+?>
 </table>
 </div>
 </main>

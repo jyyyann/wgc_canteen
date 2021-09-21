@@ -6,11 +6,16 @@ if(mysqli_connect_errno()){
 
 <?php
 /*specials query*/
-if(isset($_GET['specials'])){
-    $id=$_GET['specials'];
-}else{
-    $id='MON';
+/*broken fix it*/
+if(empty($_GET['specials'])){
+    if ('str_split(strtoupper(strftime(%a)))'=='SAT' or 'SUN'){
+    $id='MON';}
+
+    elseif ('str_split(strtoupper(strftime(%a)))'!='SAT' or 'SUN'){
+        $id='str_split(strtoupper(strftime(%a)))';}
 }
+elseif(isset($_GET['specials'])){
+        $id=$_GET['specials'];}
 
 $this_specials_query="SELECT specials.day, products.product, products.cost, categories.category, statuses.status, products.description
 FROM products, statuses, specials, categories
@@ -56,6 +61,7 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
 </div>
 
 <main>
+    <h2> Weekly Specials</h2>
     <div class="specials">
         <p> All Specials are 50% off on their respected day!</p>
         <!--specials form-->

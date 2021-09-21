@@ -48,15 +48,13 @@ if(mysqli_connect_errno()){
 
     <div class="menu">
         <h1> MENU</h1>
-        <div class="menu-content">
-        <p class="menu"> Our menu fills with healthy and delicious food options,
+        <p> Our menu fills with healthy and delicious food options,
                 perfect for breakfast, morning tea, lunch or even just a quick snack.</p>
 
         <form method='post' action='browse.php'>
             <!--category filters-->
             <input type="submit" value="SEE OUR MENU">
         </form>
-        </div>
     </div>
 
     <div class="info">
