@@ -71,7 +71,11 @@ $plink = $img_record['plink'];
 
 <main>
         <link rel='stylesheet' type='text/css' href='style.css'>
-    <h2> ITEM'S INFORMATION</h2>
+
+    <?php
+        $product = strtoupper($this_product_record['product']);
+        echo "<h2>$product</h2>";
+        ?>
 
     <div class="container">
         <div class="row">
@@ -85,7 +89,6 @@ $plink = $img_record['plink'];
         <div class="product-info">
         <!--display of item's information-->
         <?php
-        echo "<p class='pi'> Product: ".$this_product_record['product']. "<br>";
         echo "<p class='pi'> Description: ". $this_product_record['description']. "<br>";
         echo "<p class='pi'> Category: ". $this_product_record['category']. "<br>";
         echo "<p class='pi'> Cost: ". $this_product_record['cost']. "<br>";
