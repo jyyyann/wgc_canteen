@@ -328,6 +328,11 @@ input[type="text"]{
     height: auto;
 }
 
+#star{
+    max-width: 20px;
+    height: auto;
+}
+
 /*footer elements*/
 footer{
     text-align: center;

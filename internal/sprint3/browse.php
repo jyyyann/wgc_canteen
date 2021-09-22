@@ -13,6 +13,7 @@ if(isset($_POST['search'])) {
     AND products.category_id=categories.category_id
     AND products.status_id=statuses.status_id";
     $result = mysqli_query($con, $search_query);
+    $record=mysqli_fetch_assoc($result);
 }
 /*reprint the menu table*/
 elseif(isset($_POST['all_items'])) {
@@ -21,6 +22,7 @@ elseif(isset($_POST['all_items'])) {
     WHERE products.category_id=categories.category_id
     AND products.status_id=statuses.status_id";
     $result=mysqli_query($con,$all_query);
+    $record=mysqli_fetch_assoc($result);
 }
 /*all items are displayed by default*/
 else{
@@ -29,8 +31,8 @@ else{
     WHERE products.category_id=categories.category_id
     AND products.status_id=statuses.status_id";
     $result=mysqli_query($con,$all_query);
+    $record=mysqli_fetch_assoc($result);
 }
-
 ?>
 
 
@@ -112,7 +114,7 @@ else{
                         <th> Product</th>
                         <th> Cost</th>
                         <th> Status</th>
-                        <th> Rating</th>
+                        <th> Popularity</th>
                     </tr>";
 
             while ($row=mysqli_fetch_array($result))
@@ -124,8 +126,18 @@ else{
                     <td><a class="menu-product" href=information.php?product_id='.$row['product_id'].'>'.$row['product'].'</a></td>
                     <td>'.$row['cost'].'</td>
                     <td>'.$row['status'].'</td>
-                    <td>'.$row['popularities'].'</td>
-                </tr>';
+                    <td>' .$fullstar = $row['popularities'];
+                    $blankstar = 5 - $row['popularities'];
+                    $x = 1;
+                    while($x <= $fullstar and $x > 0) {
+                        echo  '<img id="star" src="img/fullstar.png" />';
+                        $x++; }
+
+                    $x = 1;
+                    while ($x <= $blankstar and $x > 0) {
+                        echo  '<img id="star" src="img/blankstar.png" />';
+                        $x++; }
+                '</td></tr>';
             }}
         ?>
 
