@@ -26,6 +26,15 @@ AND products.gf_id=gfs.gf_id
 AND products.nf_id=nfs.nf_id";
 $this_product_result=mysqli_query($con, $this_product_query);
 $this_product_record=mysqli_fetch_assoc($this_product_result);
+
+$img_query="SELECT * FROM products WHERE products.product_id= '".$id."'";
+$img_result=mysqli_query($con, $img_query);
+$img_record=mysqli_fetch_assoc($img_result);
+
+$image = $img_record['img_dir'];
+$owner = $img_record['owner'];
+$link = $img_record['link'];
+$plink = $img_record['plink'];
 ?>
 
 <!DOCTYPE html>
@@ -60,43 +69,38 @@ $this_product_record=mysqli_fetch_assoc($this_product_result);
 </div>
 
 <main>
-    <div class="container">
         <link rel='stylesheet' type='text/css' href='style.css'>
+    <h2> ITEM'S INFORMATION</h2>
+
+    <div class="container">
+        <div class="row">
+
+        <div class="product-image">
+            <img id="productimage" src="pimg/canteen-internal/<?php echo $image?>.jpg">
+            <p class="attribute2">Photo by <a href="<?php echo $link?>"><?php echo $owner?></a> from <a href="<?php echo $plink?>">Pexels</a></p>
+        </div>
+
+        <div class="product-info">
         <!--display of item's information-->
-        <h2> ITEM'S INFORMATION</h2>
         <?php
-        echo "<p> Product: ".$this_product_record['product']. "<br>";
-        echo "<p> Description: ". $this_product_record['description']. "<br><br>";
-        echo "<p> Category: ". $this_product_record['category']. "<br>";
-        echo "<p> Cost: ". $this_product_record['cost']. "<br>";
-        echo "<p> Popularity: ". $this_product_record['popularities']. "<br>";
-        echo "<p> Status: ". $this_product_record['status']. "<br><br>";
+        echo "<p class='pi'> Product: ".$this_product_record['product']. "<br>";
+        echo "<p class='pi'> Description: ". $this_product_record['description']. "<br>";
+        echo "<p class='pi'> Category: ". $this_product_record['category']. "<br>";
+        echo "<p class='pi'> Cost: ". $this_product_record['cost']. "<br>";
+        echo "<p class='pi'> Popularity: ". $this_product_record['popularities']. "<br>";
+        echo "<p class='pi'> Status: ". $this_product_record['status']. "<br>";
+        echo "<p class='pi'> Calories: ". $this_product_record['calories']. " kcal<br>";
+        echo "<p class='pi'> Vegan: ". $this_product_record['vegan']. "<br>";
+        echo "<p class='pi'> Gluten Free: ". $this_product_record['gf']. "<br>";
+        echo "<p class='pi'> Nut Free: ". $this_product_record['nf']. "<br><br>";
         ?>
-
-        <p> Dietary Information: </p>
-        <table class='content-table'>
-            <tr>
-                <th> Calories</th>
-                <th> Vegan</th>
-                <th> Gluten Free</th>
-                <th> Nut Free</th>
-            </tr>
-
-            <?php
-            echo ' <tr> 
-                   <td>'.$this_product_record['calories'].'</td>
-                   <td>'.$this_product_record['vegan'].'</td>
-                   <td>'.$this_product_record['gf'].'</td>
-                   <td>'.$this_product_record['nf'].'</td>
-                   </tr>';
-            ?>
-        </table>
-    </div>
-    <br>
+        </div>
+        </div>
     <form method='post' action='browse.php'>
         <!--category filters-->
         <input class="button1" type="submit" name="back_to_menu" value="Back to menu">
     </form>
+    </div>
 </main>
 
 <!--footer element-->

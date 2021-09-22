@@ -74,12 +74,22 @@ main{
     padding: 40px 100px 50px;
 }
 
+/*attribution for banner images*/
 .attribute{
+    color: white;
+    opacity: 70%;
+}
+
+/*attribution for product images*/
+.attribute2{
+    color: grey;
+    text-align: center;
+}
+
+.attribute, .attribute2{
     text-align: right;
     font-size: 10px;
     font-style: italic;
-    color: white;
-    opacity: 70%;
 }
 
 h1{
@@ -286,6 +296,39 @@ input[type="text"]{
     display: inline-block;
 }
 
+/*info page*/
+.container{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row{
+    padding-top: 20px;
+    display: flex;
+}
+
+.product-image{
+    padding-top: 10px;
+    flex: 50%;
+    text-align: right;
+}
+
+.product-info{
+    padding-left: 30px;
+    flex: 50%;
+}
+
+.pi{
+    text-align: left;
+}
+
+#productimage{
+    width: 400px;
+    height: auto;
+}
+
+/*footer elements*/
 footer{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
