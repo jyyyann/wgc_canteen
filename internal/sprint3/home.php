@@ -20,9 +20,7 @@ if(mysqli_connect_errno()){
     <!--this is adapted from a tutorial video on YouTube by Skillthrive-->
     <!--link here: https://www.youtube.com/watch?v=PwWHL3RyQgk-->
     <!--logo of wgc-->
-    <a href="https://ibb.co/MVcS3FP">
         <img class="logo" src="img/wgclogo.png" width=100 height=100 alt="wgclogo">
-    </a>
     <nav>
         <!--navigation tabs-->
         <ul class="nav_tag">

@@ -18,6 +18,15 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html, body{
+    height: 100%;
+}
+
+main{
+    overflow: auto;
+    min-height: 100%;
+}
+
 /*banners*/
 .home-header{
     background-image: url("img/panini.jpg");
@@ -35,15 +44,27 @@
     background-image: url("img/chocmuffin.jpg");
 }
 
+.info-header{
+    background-image: url("img/lunchbox3.jpg");
+}
+
 .drinks-header{
     background-image: url("img/coffee.jpg");
 }
 
-.info-header{
-    background-image: url("");
+.savoury-header{
+    background-image: url("img/pizza.jpg");
 }
 
-.home-header, .menu, .specials-header, .browse-header, .drinks-header. .info-header{
+.sweets-header{
+    background-image: url("img/donuts.jpg");
+}
+
+.snacks-header{
+    background-image: url("img/crisps-2.jpg");
+}
+
+.home-header, .menu, .specials-header, .browse-header, .drinks-header, .info-header, .savoury-header, .sweets-header, .snacks-header{
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
     background-repeat: no-repeat;
     background-size: cover;
@@ -111,6 +132,7 @@ header{
 
 
 h2{
+    letter-spacing: 0.03em;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     padding: 30px 0 10px;
@@ -175,33 +197,45 @@ a.menu-product{
 
 a.menu-product:hover{
     color: #DDDDDD;
+    transition: all 0.3s ease 0s;
     }
 
 /*buttons*/
+/*white buttons*/
 .button2{
     color: white;
+    background-color: transparent;
 }
 
+/*black buttons*/
 .button1{
     color: black;
+    background-color: transparent;
     display: inline-block;
 }
 
-.button1:hover, .button2:hover{
-    color: #DDDDDD;
-    border-color: #DDDDDD;
+/*teal buttons*/
+.button3{
+    color: black;
+    background-color: lightsteelblue;
+    display: inline-block;
 }
 
-.button1, .button2{
-    background-color: transparent;
+.button1:hover, .button2:hover, .button3:hover{
+    color: #DDDDDD;
+    border-color: #DDDDDD;
+    transition: all 0.3s ease 0s;
+}
+
+.button1, .button2, .button3{
     font-family: 'Montserrat', sans-serif;
     padding: 6px 14px 6px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
-    margin: 2px 2px;
+    font-size: 18px;
+    margin: 4px 4px;
     border: solid 1px;
-    border-radius: 16px;
+    border-radius: 18px;
 }
 
 /*search bar magnifying lens*/
@@ -235,5 +269,6 @@ footer{
     color: black;
     padding-top: 10px;
     padding-bottom: 10px;
+    position: relative;
 }
 

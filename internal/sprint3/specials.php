@@ -42,9 +42,7 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
         <!--this is adapted from a tutorial video on YouTube by Skillthrive-->
         <!--link here: https://www.youtube.com/watch?v=PwWHL3RyQgk-->
         <!--logo of wgc-->
-        <a href="https://ibb.co/MVcS3FP">
-            <img class="logo" src="https://i.ibb.co/MVcS3FP/wgclogo.png" width=100 height=100 alt="wgclogo">
-        </a>
+            <img class="logo" src="img/wgclogo.png" width=100 height=100 alt="wgclogo">
         <nav>
             <!--navigation tabs-->
             <ul class="nav_tag">
@@ -54,6 +52,7 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
             </ul>
         </nav>
     </header>
+    
     <h1> SPECIALS</h1><br>
     </div>
 

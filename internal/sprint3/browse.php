@@ -14,7 +14,15 @@ if(isset($_POST['search'])) {
     AND products.status_id=statuses.status_id";
     $result = mysqli_query($con, $search_query);
 }
-
+/*reprint the menu table*/
+elseif(isset($_POST['all_items'])) {
+    $all_query="SELECT * 
+    FROM products, statuses, categories
+    WHERE products.category_id=categories.category_id
+    AND products.status_id=statuses.status_id";
+    $result=mysqli_query($con,$all_query);
+}
+/*all items are displayed by default*/
 else{
     $all_query="SELECT * 
     FROM products, statuses, categories
@@ -25,9 +33,9 @@ else{
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
-<main>
     <head>
         <title> WGC Canteen</title>
         <meta charset="utf-8">
@@ -41,9 +49,7 @@ else{
             <!--this is adapted from a tutorial video on YouTube by Skillthrive-->
             <!--link here: https://www.youtube.com/watch?v=PwWHL3RyQgk-->
             <!--logo of wgc-->
-            <a href="https://ibb.co/MVcS3FP">
-                <img class="logo" src="https://i.ibb.co/MVcS3FP/wgclogo.png" width=100 height=100 alt="wgclogo">
-            </a>
+                <img class="logo" src="img/wgclogo.png" width=100 height=100 alt="wgclogo">
             <nav>
                 <!--navigation tabs-->
                 <ul class="nav_tag">
@@ -74,6 +80,11 @@ else{
 
         <form class="menu-fil" method='post' action='snacks.php'>
             <input class="button1" type="submit" name="snacks_only" value="Snacks">
+        </form>
+
+        <!--shows all items-->
+        <form class="menu-fil" method='post' action='browse.php'>
+            <input class="button3" type="submit" name="all_items" value="All Items">
         </form>
 
         <!--search bar-->
@@ -109,9 +120,10 @@ else{
                     <td>'.$row['cost'].'</td>
                     <td>'.$row['status'].'</td>
                     <td>'.$row['popularities'].'</td>
-                    </tr>';
+                </tr>';
             }}
         ?>
+
         </table>
     </main>
 
