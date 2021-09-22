@@ -7,15 +7,18 @@ if(mysqli_connect_errno()){
 <?php
 /*specials query*/
 /*broken fix it*/
-if(empty($_GET['specials'])){
-    if ('strftime(%a)'=='SAT' or 'SUN'){
-    $id='MON';}
+$day = strftime("%a");
+$daycap = strtoupper($day);
 
-    elseif ('strftime(%a)'!='SAT' or 'SUN'){
-        $id='strftime(%a)';}
+if(isset($_GET['specials'])){
+    $id=$_GET['specials'];
 }
-elseif(isset($_GET['specials'])){
-        $id=$_GET['specials'];}
+elseif ($daycap!='SAT' or 'SUN'){
+    $id=$daycap;
+}
+elseif ($daycap='SAT' or 'SUN'){
+        $id='MON';
+}
 
 $this_specials_query="SELECT specials.day, products.product, products.cost, categories.category, statuses.status, products.description
 FROM products, statuses, specials, categories
