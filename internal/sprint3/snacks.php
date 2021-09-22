@@ -83,7 +83,8 @@ else {
     </header>
 
     <h1> SNACKS</h1><br>
-    <p class="attribute"> Photo by Tim Samuel from Pexels</p>
+    <p class="attribute">Photo by <a href="https://www.pexels.com/@tim-samuel?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Tim Samuel</a>
+        from <a href="https://www.pexels.com/photo/female-holding-tasty-snacks-in-hands-6696932/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a></p>
 </div>
 
 <main>

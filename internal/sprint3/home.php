@@ -32,7 +32,8 @@ if(mysqli_connect_errno()){
 </header>
 
     <h1> WGC CANTEEN</h1><br>
-    <p class="attribute"> Photo by Pixabay from Pexels</p>
+    <p class="attribute">Photo by <a href="https://www.pexels.com/@pixabay?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pixabay</a>
+        from <a href="https://www.pexels.com/photo/close-up-photo-of-a-burrito-461198/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a></p>
 </div>
 
 <main>
@@ -53,7 +54,8 @@ if(mysqli_connect_errno()){
             <!--category filters-->
             <input class="button2" type="submit" value="SEE OUR MENU">
         </form>
-        <p class="attribute"> Photo by Adela Cristea from Pexels</p>
+        <p class="attribute">Photo by <a href="https://www.pexels.com/@adela-cristea-1500783?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Adela Cristea</a>
+            from <a href="https://www.pexels.com/photo/bread-food-sandwich-toast-4491395/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a></p>
     </div>
 
     <div class="info">

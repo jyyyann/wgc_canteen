@@ -83,7 +83,8 @@ else {
     </header>
 
     <h1> DRINKS</h1><br>
-    <p class="attribute"> Photo by Viktoria Alipatova from Pexels</p>
+    <p class="attribute">Photo by <a href="https://www.pexels.com/@viktoria-alipatova-1083711?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Viktoria Alipatova</a>
+        from <a href="https://www.pexels.com/photo/top-view-photo-of-coffee-near-cookies-2074122/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a></p>
 </div>
 
 <main>

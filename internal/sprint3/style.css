@@ -75,13 +75,13 @@ main{
 }
 
 /*attribution for banner images*/
-.attribute{
+.attribute, .attribute a{
     color: white;
     opacity: 70%;
 }
 
 /*attribution for product images*/
-.attribute2{
+.attribute2, .attribute2 a{
     color: grey;
     text-align: center;
 }

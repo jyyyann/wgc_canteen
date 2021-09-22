@@ -65,7 +65,8 @@ $plink = $img_record['plink'];
 </header>
 
     <h1>INFO</h1><br>
-    <p class="attribute"> Photo by Ella Olsson from Pexels</p>
+    <p class="attribute">Photo by <a href="https://www.pexels.com/@ella-olsson-572949?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Ella Olsson</a>
+        from <a href="https://www.pexels.com/photo/flat-lay-photography-of-three-tray-of-foods-1640775/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a></p>
 </div>
 
 <main>
@@ -77,7 +78,8 @@ $plink = $img_record['plink'];
 
         <div class="product-image">
             <img id="productimage" src="pimg/canteen-internal/<?php echo $image?>.jpg">
-            <p class="attribute2">Photo by <a href="<?php echo $link?>"><?php echo $owner?></a> from <a href="<?php echo $plink?>">Pexels</a></p>
+            <p class="attribute2">Photo by <a href="<?php echo $link?>"><?php echo $owner?></a>
+                from <a href="<?php echo $plink?>">Pexels</a></p>
         </div>
 
         <div class="product-info">

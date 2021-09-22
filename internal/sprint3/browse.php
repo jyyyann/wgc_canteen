@@ -61,7 +61,8 @@ else{
         </header>
 
         <h1> MENU</h1><br>
-        <p class="attribute"> Photo by tomateoignons from Pexels</p>
+        <p class="attribute">Photo by <a href="https://www.pexels.com/@tomateoignons?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">tomateoignons</a>
+            from <a href="https://www.pexels.com/photo/brown-muffins-with-chocolate-chips-3776529/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a></p>
     </div>
 
     <main>

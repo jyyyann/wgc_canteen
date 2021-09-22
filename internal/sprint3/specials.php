@@ -57,7 +57,8 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
     </header>
     
     <h1> SPECIALS</h1><br>
-    <p class="attribute"> Photo by Daniel Reche from Pexels</p>
+    <p class="attribute">Photo by <a href="https://www.pexels.com/@daniel-reche-718241?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Daniel Reche</a>
+        from <a href="https://www.pexels.com/photo/photo-of-burger-beside-fires-3616956/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a></p>
     </div>
 
 <main>
