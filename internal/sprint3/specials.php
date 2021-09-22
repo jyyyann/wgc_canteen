@@ -54,6 +54,7 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
     </header>
     
     <h1> SPECIALS</h1><br>
+    <p class="attribute"> Photo by Daniel Reche from Pexels</p>
     </div>
 
 <main>
@@ -92,7 +93,7 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
 
 <!--footer element-->
 <footer>
-    <p> © 2021 Jasmine Yip All Rights Reserved</p>
+    <p class="footer-content"> © 2021 Jasmine Yip All Rights Reserved</p>
 </footer>
 
 </body>

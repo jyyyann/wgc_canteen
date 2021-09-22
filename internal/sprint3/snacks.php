@@ -83,10 +83,16 @@ else {
     </header>
 
     <h1> SNACKS</h1><br>
+    <p class="attribute"> Photo by Tim Samuel from Pexels</p>
 </div>
 
 <main>
-    <h2> CATERGORIES</h2>
+    <h2> CATEGORIES</h2>
+    <!--shows all items-->
+    <form class="menu-fil" method='post' action='browse.php'>
+        <input class="button1" type="submit" name="all_items" value="All Items">
+    </form>
+    
     <!--category tabs-->
     <form class="menu-fil" method='post' action='drinks.php'>
         <input class="button1" type="submit" name="drinks_only" value="Drinks">
@@ -101,12 +107,7 @@ else {
     </form>
 
     <form class="menu-fil" method='post' action='snacks.php'>
-        <input class="button1" type="submit" name="snacks_only" value="Snacks">
-    </form>
-
-    <!--shows all items-->
-    <form class="menu-fil" method='post' action='browse.php'>
-        <input class="button3" type="submit" name="all_items" value="All Items">
+        <input class="button3" type="submit" name="snacks_only" value="Snacks">
     </form>
 
     <h2> SNACKS</h2>
@@ -161,7 +162,7 @@ else {
 
 <!--footer element-->
 <footer>
-    <p> © 2021 Jasmine Yip All Rights Reserved</p>
+    <p class="footer-content"> © 2021 Jasmine Yip All Rights Reserved</p>
 </footer>
 
 </body>

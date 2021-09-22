@@ -32,6 +32,7 @@ if(mysqli_connect_errno()){
 </header>
 
     <h1> WGC CANTEEN</h1><br>
+    <p class="attribute"> Photo by Pixabay from Pexels</p>
 </div>
 
 <main>
@@ -52,6 +53,7 @@ if(mysqli_connect_errno()){
             <!--category filters-->
             <input class="button2" type="submit" value="SEE OUR MENU">
         </form>
+        <p class="attribute"> Photo by Adela Cristea from Pexels</p>
     </div>
 
     <div class="info">
@@ -77,7 +79,7 @@ if(mysqli_connect_errno()){
 </main>
 <!--footer element-->
 <footer>
-    <p> © 2021 Jasmine Yip All Rights Reserved</p>
+    <p class="footer-content"> © 2021 Jasmine Yip All Rights Reserved</p>
 </footer>
 
 </body>

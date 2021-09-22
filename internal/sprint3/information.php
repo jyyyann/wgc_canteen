@@ -56,13 +56,14 @@ $this_product_record=mysqli_fetch_assoc($this_product_result);
 </header>
 
     <h1>INFO</h1><br>
+    <p class="attribute"> Photo by Ella Olsson from Pexels</p>
 </div>
 
 <main>
     <div class="container">
         <link rel='stylesheet' type='text/css' href='style.css'>
         <!--display of item's information-->
-        <h2> ITEM'S INFO</h2>
+        <h2> ITEM'S INFORMATION</h2>
         <?php
         echo "<p> Product: ".$this_product_record['product']. "<br>";
         echo "<p> Description: ". $this_product_record['description']. "<br><br>";
@@ -100,7 +101,7 @@ $this_product_record=mysqli_fetch_assoc($this_product_result);
 
 <!--footer element-->
 <footer>
-    <p> © 2021 Jasmine Yip All Rights Reserved</p>
+    <p class="footer-content"> © 2021 Jasmine Yip All Rights Reserved</p>
 </footer>
 
 </body>

@@ -61,10 +61,16 @@ else{
         </header>
 
         <h1> MENU</h1><br>
+        <p class="attribute"> Photo by tomateoignons from Pexels</p>
     </div>
 
     <main>
-        <h2> CATERGORIES</h2>
+        <h2> CATEGORIES</h2>
+        <!--shows all items-->
+        <form class="menu-fil" method='post' action='browse.php'>
+            <input class="button3" type="submit" name="all_items" value="All Items">
+        </form>
+
         <!--category tabs-->
         <form class="menu-fil" method='post' action='drinks.php'>
             <input class="button1" type="submit" name="drinks_only" value="Drinks">
@@ -82,11 +88,6 @@ else{
             <input class="button1" type="submit" name="snacks_only" value="Snacks">
         </form>
 
-        <!--shows all items-->
-        <form class="menu-fil" method='post' action='browse.php'>
-            <input class="button3" type="submit" name="all_items" value="All Items">
-        </form>
-
         <!--search bar-->
         <h2 class="title"> SEARCH</h2>
         <form action="browse.php" method="post">
@@ -94,10 +95,13 @@ else{
             <input class="searchlens" type="submit" name="submit">
         </form><br>
 
+        <!--refresh button-->
+        <button class="button4" onClick="window.location.reload();">Refresh Page</button>
+
         <?php
         $count = mysqli_num_rows($result);
         if($count==0) {
-            echo "There was no search results!";
+            echo "<p>There was no search results!</p>";
         }
         else{
             echo"<!--menu table-->
@@ -129,7 +133,7 @@ else{
 
     <!--footer element-->
     <footer>
-        <p> © 2021 Jasmine Yip All Rights Reserved</p>
+        <p class="footer-content"> © 2021 Jasmine Yip All Rights Reserved</p>
     </footer>
 
     </body>
