@@ -7,16 +7,17 @@ if(mysqli_connect_errno()){
 <?php
 /*specials query*/
 /*broken fix it*/
+date_default_timezone_set('Pacific/Auckland');
 $day = strftime("%a");
-$daycap = strtoupper($day);
+$dayofweek = strtoupper($day);
 
 if(isset($_GET['specials'])){
     $id=$_GET['specials'];
 }
-elseif ($daycap!='SAT' or 'SUN'){
-    $id=$daycap;
+elseif ($dayofweek!='SAT' or 'SUN'){
+    $id=$dayofweek;
 }
-elseif ($daycap='SAT' or 'SUN'){
+elseif ($dayofweek='SAT' or 'SUN'){
         $id='MON';
 }
 
