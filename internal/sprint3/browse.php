@@ -140,8 +140,7 @@ else{
                 '</td></tr>';
             }}
         ?>
-
-        </table>
+        </table><br><br>
     </main>
 
     <!--footer element-->

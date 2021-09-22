@@ -169,7 +169,7 @@ else{
     }}
 ?>
 ?>
-</table>
+</table><br><br>
 </main>
 
 <!--footer element-->
