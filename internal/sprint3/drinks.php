@@ -142,7 +142,7 @@ else{
                         <th> Product</th>
                         <th> Cost</th>
                         <th> Status</th>
-                        <th> Rating</th>
+                        <th> Popularity</th>
                     </tr>";
 
     while ($row=mysqli_fetch_array($result))
@@ -154,9 +154,20 @@ else{
                     <td><a class="menu-product" href=information.php?product_id='.$row['product_id'].'>'.$row['product'].'</a></td>
                     <td>'.$row['cost'].'</td>
                     <td>'.$row['status'].'</td>
-                    <td>'.$row['popularities'].'</td>
-                    </tr>';
+                    <td id="starnum">' .$fullstar = $row['popularities'];
+        $blankstar = 5 - $row['popularities'];
+        $x = 1;
+        while($x <= $fullstar and $x > 0) {
+            echo  '<img id="star" src="img/fullstar.png" />';
+            $x++; }
+
+        $x = 1;
+        while ($x <= $blankstar and $x > 0) {
+            echo  '<img id="star" src="img/blankstar.png" />';
+            $x++; }
+        '</td></tr>';
     }}
+?>
 ?>
 </table>
 </main>

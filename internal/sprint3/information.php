@@ -91,7 +91,7 @@ $plink = $img_record['plink'];
         <?php
         echo "<p class='pi'> Description: ". $this_product_record['description']. "<br>";
         echo "<p class='pi'> Category: ". $this_product_record['category']. "<br>";
-        echo "<p class='pi'> Cost: ". $this_product_record['cost']. "<br>";
+        echo "<p class='pi'> Cost: $ ". $this_product_record['cost']. "<br>";
         echo "<p class='pi'> Popularity: ". $this_product_record['popularities']. "<br>";
         echo "<p class='pi'> Status: ". $this_product_record['status']. "<br>";
         echo "<p class='pi'> Calories: ". $this_product_record['calories']. " kcal<br>";

@@ -126,7 +126,7 @@ else{
                     <td><a class="menu-product" href=information.php?product_id='.$row['product_id'].'>'.$row['product'].'</a></td>
                     <td>'.$row['cost'].'</td>
                     <td>'.$row['status'].'</td>
-                    <td>' .$fullstar = $row['popularities'];
+                    <td id="starnum">' .$fullstar = $row['popularities'];
                     $blankstar = 5 - $row['popularities'];
                     $x = 1;
                     while($x <= $fullstar and $x > 0) {

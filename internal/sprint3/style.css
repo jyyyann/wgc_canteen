@@ -189,6 +189,11 @@ p{
     margin-right: auto;
 }
 
+#starnum{
+    color: transparent;
+    font-size: 0.000001px;
+}
+
 .content-table td{
     text-align: left;
     border-bottom: 1px solid #DDDDDD;
