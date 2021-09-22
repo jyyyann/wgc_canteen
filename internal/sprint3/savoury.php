@@ -120,7 +120,7 @@ else {
     <form name='sorting_form' id='sorting_form' method='post' action='savoury.php' class="center">
         <select id='sorter' name ='sortby' class='choice'>
             <!--options-->
-            <option value = 'all_drinks'> All Drinks</option>
+            <option value = 'all_savoury'> All Savoury</option>
             <option value = 'pop_desc'> Most Popular</option>
             <option value = 'cost_asc'> Cost Ascending</option>
             <option value = 'available_only'> Available Only</option>

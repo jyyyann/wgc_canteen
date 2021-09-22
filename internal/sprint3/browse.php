@@ -13,7 +13,6 @@ if(isset($_POST['search'])) {
     AND products.category_id=categories.category_id
     AND products.status_id=statuses.status_id";
     $result = mysqli_query($con, $search_query);
-    $record=mysqli_fetch_assoc($result);
 }
 /*reprint the menu table*/
 elseif(isset($_POST['all_items'])) {
@@ -22,7 +21,6 @@ elseif(isset($_POST['all_items'])) {
     WHERE products.category_id=categories.category_id
     AND products.status_id=statuses.status_id";
     $result=mysqli_query($con,$all_query);
-    $record=mysqli_fetch_assoc($result);
 }
 /*all items are displayed by default*/
 else{
@@ -31,7 +29,6 @@ else{
     WHERE products.category_id=categories.category_id
     AND products.status_id=statuses.status_id";
     $result=mysqli_query($con,$all_query);
-    $record=mysqli_fetch_assoc($result);
 }
 ?>
 
