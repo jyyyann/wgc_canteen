@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/ /*p*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+/*font-family: 'Open Sans', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+/*font-family: 'Work Sans', sans-serif;*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body{
+    height: 100%;
+}
+
+main{
+    overflow: auto;
+    min-height: 100%;
+}
+
+/*banners*/
+.home-header{
+    background-image: url("img/panini.jpg");
+}
+
+.menu{
+    background-image: url("img/avosandwich.jpg");
+}
+
+.specials-header{
+    background-image: url("img/burger.jpg");
+}
+
+.browse-header{
+    background-image: url("img/chocmuffin.jpg");
+}
+
+.info-header{
+    background-image: url("img/lunchbox3.jpg");
+}
+
+.drinks-header{
+    background-image: url("img/coffee.jpg");
+}
+
+.savoury-header{
+    background-image: url("img/pizza.jpg");
+}
+
+.sweets-header{
+    background-image: url("img/donuts.jpg");
+}
+
+.snacks-header{
+    background-image: url("img/crisps-2.jpg");
+}
+
+.home-header, .menu, .specials-header, .browse-header, .drinks-header, .info-header, .savoury-header, .sweets-header, .snacks-header{
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    padding: 40px 100px 50px;
+}
+
+/*attribution for banner images*/
+.attribute, .attribute a{
+    color: white;
+    opacity: 70%;
+}
+
+/*attribution for product images*/
+.attribute2, .attribute2 a{
+    color: grey;
+    text-align: center;
+}
+
+.attribute, .attribute2{
+    text-align: right;
+    font-size: 10px;
+    font-style: italic;
+}
+
+h1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*padding: 40px 100px;*/
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.nav_tag {
+    list-style: none;
+
+}
+
+.nav_tag li {
+    display: inline-block;
+    padding: 0px 15px;
+}
+
+.nav_tag li a {
+    color: white;
+}
+
+.nav_tag li a {
+    text-decoration: none;
+    letter-spacing: 0.035em;
+    font-size: 14.5px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_tag li a:hover {
+    color: #3BC5CC;
+}
+
+.about-us, .menu-content, .info, .specials{
+    width: 85%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.p2{
+    color: white;
+}
+
+
+h2{
+    letter-spacing: 0.03em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    padding: 30px 0 10px;
+    color: dimgrey;
+}
+
+.specials{
+    line-height: 2.0;
+    font-size: 18px;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2.0;
+    font-size: 18px;
+    color: dimgrey;
+}
+
+.clickit{
+    color: #3BC5CC;
+}
+
+/*items in drop-down list*/
+.choice{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.table{
+    text-align: center;
+}
+/*browse page table
+ * this was adapted from a tutorial video by dcode on Youtube
+ * link here:
+ * https://youtu.be/biI9OFH6Nmg
+ */
+.content-table{
+    border-collapse: collapse;
+    min-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#starnum{
+    color: transparent;
+    font-size: 0.000001px;
+}
+
+.content-table td{
+    text-align: left;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.content-table th,
+.content-table td{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    padding: 12px 20px;
+    text-align: left;
+}
+
+a.menu-product{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+a.menu-product:hover{
+    color: #3BC5CC;
+    }
+
+/*buttons*/
+/*black buttons*/
+.button1, .button4{
+    color: black;
+    background-color: transparent;
+    display: inline-block;
+}
+
+.button1:hover, .button4:hover{
+    background-color: #E2F7F5;
+    transition: all 0.3s ease 0s;
+}
+
+/*white buttons*/
+.button2{
+    color: white;
+    background-color: transparent;
+}
+
+.button2:hover{
+    color: #3BC5CC;
+    border-color: #3BC5CC;
+}
+
+/*teal buttons*/
+.button3{
+    color: black;
+    background-color: #E2F7F5;
+    display: inline-block;
+}
+
+.button1, .button2, .button3{
+    font-family: 'Montserrat', sans-serif;
+    padding: 6px 14px 6px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 4px 4px;
+    border: solid 1px;
+    border-radius: 18px;
+}
+
+/*refresh button*/
+.button4{
+    font-family: 'Montserrat', sans-serif;
+    padding: 4px 12px 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 4px 4px;
+    border: solid 1px;
+}
+
+/*search bar magnifying lens*/
+.searchlens {
+    background : url("img/maglens2.jpg") no-repeat center center;
+    width : 25px;
+    height: 25px;
+    background-size: 100% 100%;
+    padding: 8px 8px 0;
+    border : none;
+    color : transparent;
+    font-size : 0
+}
+
+.searchbox{
+    padding: 6px 14px 6px;
+    margin: 2px 2px;
+    border: solid 1px;
+    border-color: dimgrey;
+    border-radius: 16px;
+}
+
+input[type="text"]{
+    font-size: 18px;
+    text-align: left;
+}
+
+.menu-fil{
+    display: inline-block;
+}
+
+/*info page*/
+.container{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row{
+    padding-top: 20px;
+    display: flex;
+}
+
+.product-image{
+    padding-top: 10px;
+    flex: 50%;
+    text-align: right;
+}
+
+.product-info{
+    padding-left: 30px;
+    flex: 50%;
+}
+
+.pi{
+    text-align: left;
+}
+
+#productimage{
+    width: 400px;
+    height: auto;
+}
+
+#star{
+    max-width: 20px;
+    height: auto;
+}
+
+.star_atr{
+    font-size: 14px;
+}
+
+.star_atr a{
+    color: dimgrey;
+}
+
+/*footer elements*/
+footer{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: dimgrey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.footer-content{
+    color: white;
+}
+

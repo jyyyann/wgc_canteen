@@ -168,7 +168,14 @@ else {
             '</td></tr>';
         }}
     ?>
-    </table><br><br>
+    </table><br>
+
+    <!--star images attribution-->
+    <p class="star_atr"><i><a href="https://icons8.com/icon/60003/star">full star icon by Icons8</a>
+            <a target="_blank" href="https://icons8.com/icon/16101/star">  /  blank star</a> icon by
+            <a target="_blank" href="https://icons8.com">Icons8</a>
+        </i></p><br>
+
 </main>
 
 <!--footer element-->
