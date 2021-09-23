@@ -27,6 +27,8 @@ AND products.nf_id=nfs.nf_id";
 $this_product_result=mysqli_query($con, $this_product_query);
 $this_product_record=mysqli_fetch_assoc($this_product_result);
 
+$name = $this_product_record['alt_text'];
+
 $img_query="SELECT * FROM products WHERE products.product_id= '".$id."'";
 $img_result=mysqli_query($con, $img_query);
 $img_record=mysqli_fetch_assoc($img_result);
@@ -53,7 +55,7 @@ $plink = $img_record['plink'];
     <!--this is adapted from a tutorial video on YouTube by Skillthrive-->
     <!--link here: https://www.youtube.com/watch?v=PwWHL3RyQgk-->
     <!--logo of wgc-->
-    <img class="logo" src="img/wgclogo.png" width=100 height=100 alt="wgclogo">
+    <img class="logo" src="img/wgclogo.png" width=100 height=100 alt="the logo of wellington girls college">
     <nav>
         <!--navigation tabs-->
         <ul class="nav_tag">
@@ -81,7 +83,7 @@ $plink = $img_record['plink'];
         <div class="row">
 
         <div class="product-image">
-            <img id="productimage" src="pimg/canteen-internal/<?php echo $image?>.jpg">
+            <img id="productimage" src="pimg/canteen-internal/<?php echo $image?>.jpg" alt="<?php echo $name?>">
             <p class="attribute2">Photo by <a href="<?php echo $link?>"><?php echo $owner?></a>
                 from <a href="<?php echo $plink?>">Pexels</a></p>
         </div>
@@ -92,7 +94,20 @@ $plink = $img_record['plink'];
         echo "<p class='pi'> Description: ". $this_product_record['description']. "<br>";
         echo "<p class='pi'> Category: ". $this_product_record['category']. "<br>";
         echo "<p class='pi'> Cost: $ ". $this_product_record['cost']. "<br>";
-        echo "<p class='pi'> Popularity: ". $this_product_record['popularities']. "<br>";
+        echo "<p class='pi'> Popularity: "?>
+
+            <?php $fullstar = $this_product_record['popularities'];
+                    $blankstar = 5 - $this_product_record['popularities'];
+                    $x = 1;
+                    while($x <= $fullstar and $x > 0) {
+                        echo  '<img id="star" src="img/fullstar.png" />';
+                        $x++; }
+
+                    $x = 1;
+                    while ($x <= $blankstar and $x > 0) {
+                        echo  '<img id="star" src="img/blankstar.png" />';
+                        $x++; }?>
+        <?php
         echo "<p class='pi'> Status: ". $this_product_record['status']. "<br>";
         echo "<p class='pi'> Calories: ". $this_product_record['calories']. " kcal<br>";
         echo "<p class='pi'> Vegan: ". $this_product_record['vegan']. "<br>";

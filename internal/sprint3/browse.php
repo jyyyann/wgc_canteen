@@ -48,7 +48,7 @@ else{
             <!--this is adapted from a tutorial video on YouTube by Skillthrive-->
             <!--link here: https://www.youtube.com/watch?v=PwWHL3RyQgk-->
             <!--logo of wgc-->
-                <img class="logo" src="img/wgclogo.png" width=100 height=100 alt="wgclogo">
+                <img class="logo" src="img/wgclogo.png" width=100 height=100 alt="the logo of wellington girls college">
             <nav>
                 <!--navigation tabs-->
                 <ul class="nav_tag">
@@ -105,7 +105,7 @@ else{
         }
         else{
             echo"<!--menu table-->
-                <p> Click on the item to see more details!</p><br>
+                <p class='clickit'> Click on the item to see more details!</p><br>
                 <table class='content-table'>
                     <tr>
                         <th> Product</th>
@@ -123,6 +123,7 @@ else{
                     <td><a class="menu-product" href=information.php?product_id='.$row['product_id'].'>'.$row['product'].'</a></td>
                     <td>'.$row['cost'].'</td>
                     <td>'.$row['status'].'</td>
+                    <!--printing star rating-->
                     <td id="starnum">' .$fullstar = $row['popularities'];
                     $blankstar = 5 - $row['popularities'];
                     $x = 1;

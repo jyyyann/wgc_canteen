@@ -6,7 +6,7 @@ if(mysqli_connect_errno()){
 
 <?php
 /*specials query*/
-/*broken fix it*/
+/*detect current day of the week*/
 date_default_timezone_set('Pacific/Auckland');
 $day = strftime("%a");
 $dayofweek = strtoupper($day);
@@ -46,7 +46,7 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
         <!--this is adapted from a tutorial video on YouTube by Skillthrive-->
         <!--link here: https://www.youtube.com/watch?v=PwWHL3RyQgk-->
         <!--logo of wgc-->
-            <img class="logo" src="img/wgclogo.png" width=100 height=100 alt="wgclogo">
+            <img class="logo" src="img/wgclogo.png" width=100 height=100 alt="the logo of wellington girls college">
         <nav>
             <!--navigation tabs-->
             <ul class="nav_tag">
@@ -64,7 +64,7 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
 
 <main>
     <h2> WEEKLY SPECIALS </h2>
-    <div class="specials">
+    <div class="specials" title="image of hamburger and fries">
         <p> All Specials are 50% off on their respected day!</p>
         <!--specials form-->
         <form name='specials_form' id='specials_form' method = 'get' action ='specials.php' class="center">
@@ -89,7 +89,7 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
         echo "<p> Day: ".$this_specials_record['day']. "<br>";
         echo "<p> Special: ".$this_specials_record['product']. "<br>";
         echo "<p> Category: ". $this_specials_record['category']. "<br>";
-        echo "<p> Cost: <strike>". $this_specials_record['cost']. "</strike> ";
+        echo "<p> Cost: $ <strike>". $this_specials_record['cost']. "</strike> ";
         echo number_format($new_cost,2);
         echo "<p> Status: ". $this_specials_record['status']. "<br>";
         ?>
