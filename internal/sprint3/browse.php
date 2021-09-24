@@ -5,6 +5,7 @@ if(mysqli_connect_errno()){
 ?>
 
 <?php
+/*get the searched item*/
 if(isset($_POST['search'])) {
     $search = $_POST['search'];
     $search_query = "SELECT *  
@@ -91,7 +92,9 @@ else{
         <!--search bar-->
         <h2 class="title"> SEARCH</h2>
         <form action="browse.php" method="post">
+            <label for="search">
             <input class="searchbox" type="text" name='search'>
+            </label>
             <input class="searchlens" type="submit" name="submit">
         </form><br>
 
@@ -128,14 +131,14 @@ else{
                     $blankstar = 5 - $row['popularities'];
                     $x = 1;
                     while($x <= $fullstar and $x > 0) {
-                        echo  '<img id="star" src="img/fullstar.png" />';
+                        echo  '<img id="star" src="img/fullstar.png" alt="filled star icon"/>';
                         $x++; }
 
                     $x = 1;
                     while ($x <= $blankstar and $x > 0) {
-                        echo  '<img id="star" src="img/blankstar.png" />';
-                        $x++; }
-                '</td></tr>';
+                        echo  '<img id="star" src="img/blankstar.png" alt="blank star icon"/>';
+                        $x++; }'</td>
+                </tr>';
             }}
         ?>
         </table><br>

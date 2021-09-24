@@ -14,11 +14,13 @@ $dayofweek = strtoupper($day);
 if(isset($_GET['specials'])){
     $id=$_GET['specials'];
 }
-elseif ($dayofweek!='SAT' or 'SUN'){
-    $id=$dayofweek;
+
+elseif ($dayofweek == 'SAT' or 'SUN') {
+    $id = 'MON';
 }
-elseif ($dayofweek='SAT' or 'SUN'){
-        $id='MON';
+
+else {
+    $id=$dayofweek;
 }
 
 $this_specials_query="SELECT specials.day, products.product, products.cost, categories.category, statuses.status, products.description
@@ -84,12 +86,13 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
         /*show the new cost with 50% off next to the original cost*/
         /*this was adapted from a post on stackoverflow by Grant*/
         /*link here: https://stackoverflow.com/questions/25744355/make-calculation-php-echo-total*/
+        $cost = $this_specials_record['cost'];
         $new_cost = $this_specials_record['cost']*0.5;
 
         echo "<p> Day: ".$this_specials_record['day']. "<br>";
         echo "<p> Special: ".$this_specials_record['product']. "<br>";
         echo "<p> Category: ". $this_specials_record['category']. "<br>";
-        echo "<p> Cost: $ <strike>". $this_specials_record['cost']. "</strike> ";
+        echo "<p> Cost: $ <del>$cost</del> ";
         echo number_format($new_cost,2);
         echo "<p> Status: ". $this_specials_record['status']. "<br>";
         ?>

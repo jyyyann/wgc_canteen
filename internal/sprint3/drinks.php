@@ -10,14 +10,16 @@ if (isset($_POST['sorting_button'])) {
     if (isset($_POST['sortby'])) {
         $sort = $_POST['sortby'];
     }
+    /*displaying all drinks*/
     if ($sort == 'all_drinks') {
         $all_drinks_query = "SELECT * 
             FROM products, statuses, categories
-            WHERE products.category_id=categories.category_id
-            AND products.category_id='DR'
+            WHERE products.category_id='DR'
+            AND products.category_id=categories.category_id
             AND products.status_id=statuses.status_id";
         $result = mysqli_query($con, $all_drinks_query);
 
+        /*shows most popular drinks first*/
     } elseif ($sort == 'pop_desc') {
         $pop_asc_query = "SELECT * 
             FROM products, statuses, categories 
@@ -27,15 +29,17 @@ if (isset($_POST['sorting_button'])) {
             ORDER BY products.popularities DESC";
         $result = mysqli_query($con, $pop_asc_query);
 
+        /*shows cheapest drinks first*/
     } elseif ($sort == 'cost_asc') {
         $cost_asc_query = "SELECT * 
             FROM products, statuses, categories
-            WHERE products.category_id=categories.category_id
-            AND products.category_id='DR'
+            WHERE products.category_id='DR'
+            AND products.category_id=categories.category_id
             AND products.status_id=statuses.status_id
             ORDER BY products.cost ASC";
         $result = mysqli_query($con, $cost_asc_query);
 
+        /*shows available drinks only*/
     } elseif ($sort == 'available_only') {
         $available_only_query = "SELECT * 
             FROM products, statuses, categories 
@@ -118,13 +122,15 @@ else {
 <!--this was adapted from an article written by @Kamal Argarwal11 on geeksforgeeks-->
 <!--link here: https://www.geeksforgeeks.org/how-to-get-multiple-selected-values-of-select-box-in-php/-->
     <form name='sorting_form' id='sorting_form' method='post' action='drinks.php' class="center">
-    <select id='sorter' name ='sortby' class='choice'>
+        <label for="sorter">
+        <select id='sorter' name ='sortby' class='choice'>
         <!--options-->
         <option value = 'all_drinks'> All Drinks</option>
         <option value = 'pop_desc'> Most Popular</option>
         <option value = 'cost_asc'> Cost Ascending</option>
         <option value = 'available_only'> Available Only</option>
     </select>
+        </label>
     <input class="button1" type='submit' name='sorting_button' value='Sort'>
 </form><br>
 
@@ -135,8 +141,7 @@ if($count==0) {
     echo "There was no search results!";
 }
 else{
-    echo"<!--menu table-->
-                <p class='clickit'> Click on the item to see more details!</p><br>
+    echo"<p class='clickit'> Click on the item to see more details!</p><br>
                 <table class='content-table'>
                     <tr>
                         <th> Product</th>
@@ -158,12 +163,12 @@ else{
         $blankstar = 5 - $row['popularities'];
         $x = 1;
         while($x <= $fullstar and $x > 0) {
-            echo  '<img id="star" src="img/fullstar.png" />';
+            echo  '<img id="star" src="img/fullstar.png" alt="filled star icon"/>';
             $x++; }
 
         $x = 1;
         while ($x <= $blankstar and $x > 0) {
-            echo  '<img id="star" src="img/blankstar.png" />';
+            echo  '<img id="star" src="img/blankstar.png" alt="blank star icon"/>';
             $x++; }
         '</td></tr>';
     }}

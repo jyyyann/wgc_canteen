@@ -118,6 +118,7 @@ else {
     <!--this was adapted from an article written by @Kamal Argarwal11 on geeksforgeeks-->
     <!--link here: https://www.geeksforgeeks.org/how-to-get-multiple-selected-values-of-select-box-in-php/-->
     <form name='sorting_form' id='sorting_form' method='post' action='sweets.php' class="center">
+        <label for="sorter">
         <select id='sorter' name ='sortby' class='choice'>
             <!--options-->
             <option value = 'all_sweets'> All Sweets</option>
@@ -125,6 +126,7 @@ else {
             <option value = 'cost_asc'> Cost Ascending</option>
             <option value = 'available_only'> Available Only</option>
         </select>
+        </label>
         <input class="button1" type='submit' name='sorting_button' value='Sort'>
     </form><br>
 
@@ -158,12 +160,12 @@ else {
             $blankstar = 5 - $row['popularities'];
             $x = 1;
             while($x <= $fullstar and $x > 0) {
-                echo  '<img id="star" src="img/fullstar.png" />';
+                echo  '<img id="star" src="img/fullstar.png" alt="filled star icon"/>';
                 $x++; }
 
             $x = 1;
             while ($x <= $blankstar and $x > 0) {
-                echo  '<img id="star" src="img/blankstar.png" />';
+                echo  '<img id="star" src="img/blankstar.png" alt="blank star icon"/>';
                 $x++; }
             '</td></tr>';
         }}
