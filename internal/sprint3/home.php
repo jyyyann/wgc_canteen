@@ -32,6 +32,7 @@ if(mysqli_connect_errno()){
 </header>
 
     <h1> WGC CANTEEN</h1><br>
+    <!--attribution for header image-->
     <p class="attribute">Photo by <a href="https://www.pexels.com/@pixabay?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pixabay</a>
         from <a href="https://www.pexels.com/photo/close-up-photo-of-a-burrito-461198/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a></p>
 </div>
@@ -39,7 +40,7 @@ if(mysqli_connect_errno()){
 <main>
     <div class="about-us">
         <h2> ABOUT US</h2>
-        <p class="about-us"> Welcome to Wellington Girls' College Canteen! We opened since the beginning of the century.
+        <p> Welcome to Wellington Girls' College Canteen! We opened since the beginning of the century.
             We strive to deliver quality food with reasonable price to our students. We update our menu frequently
             to make sure we have got the most well-liked items for you all.
             Check out our menu to see a wide range of food and drinks available. There has got to be something for you!</p>
@@ -47,7 +48,7 @@ if(mysqli_connect_errno()){
 
     <div class="menu">
         <h1> MENU</h1>
-        <p class="p2"> Our menu fills with healthy and delicious food options,
+        <p class="menu-intro"> Our menu fills with healthy and delicious food options,
                 perfect for breakfast, morning tea, lunch or even just a quick snack.</p><br>
 
         <form method='post' action='browse.php'>
@@ -68,17 +69,17 @@ if(mysqli_connect_errno()){
 
         <h2> HOURS</h2>
         <p> 8.30AM-2PM Mon-Fri<br>
-            Closed Sat & Sun
-        </p>
+            Closed Sat & Sun</p>
 
         <h2> CONTACT</h2>
-        <p class="info-content"> Phone number: +64 021 0268 2889<br>
+        <p> Phone number: +64 021 0268 2889<br>
         Email: canteen@wgc.school.nz<br>
         Facebook: WGC Canteen<br>
         Instagram: @wgccanteen<br>
         </p>
     </div>
 </main>
+
 <!--footer element-->
 <footer>
     <p class="footer-content"> © 2021 Jasmine Yip All Rights Reserved</p>

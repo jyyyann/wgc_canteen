@@ -10,7 +10,7 @@ if (isset($_POST['sorting_button'])) {
     if (isset($_POST['sortby'])) {
         $sort = $_POST['sortby'];
     }
-    /*displaying all drinks*/
+    /*displays all drinks*/
     if ($sort == 'all_drinks') {
         $all_drinks_query = "SELECT * 
             FROM products, statuses, categories
@@ -49,7 +49,7 @@ if (isset($_POST['sorting_button'])) {
             AND products.status_id=statuses.status_id";
         $result = mysqli_query($con, $available_only_query);}
 
-} /*print whole menu by default*/
+} /*print all drinks by default*/
 else {
     $drinks_only_query = "SELECT *
     FROM products, statuses, categories
@@ -95,32 +95,32 @@ else {
     <h2> CATEGORIES</h2>
     <!--shows all items-->
     <form class="menu-fil" method='post' action='browse.php'>
-        <input class="button1" type="submit" name="all_items" value="All Items">
+        <input class="button1" type="submit" value="All Items">
     </form>
     
     <!--category tabs-->
     <form class="menu-fil" method='post' action='drinks.php'>
-        <input class="button3" type="submit" name="drinks_only" value="Drinks">
+        <input class="button3" type="submit" value="Drinks">
     </form>
 
     <form class="menu-fil" method='post' action='sweets.php'>
-        <input class="button1" type="submit" name="sweets_only" value="Sweets">
+        <input class="button1" type="submit" value="Sweets">
     </form>
 
     <form class="menu-fil" method='post' action='savoury.php'>
-        <input class="button1" type="submit" name="savoury_only" value="Savoury">
+        <input class="button1" type="submit" value="Savoury">
     </form>
 
     <form class="menu-fil" method='post' action='snacks.php'>
-        <input class="button1" type="submit" name="snacks_only" value="Snacks">
+        <input class="button1" type="submit" value="Snacks">
     </form>
 
     <h2> DRINKS</h2>
 
-<!--sorting form-->
-<!--drop-down list that provides options of sorting method, which then apply on the menu and refresh.-->
-<!--this was adapted from an article written by @Kamal Argarwal11 on geeksforgeeks-->
-<!--link here: https://www.geeksforgeeks.org/how-to-get-multiple-selected-values-of-select-box-in-php/-->
+    <!--sorting form-->
+    <!--drop-down list that provides options of sorting method, which then apply on the menu and refresh.-->
+    <!--this was adapted from an article written by @Kamal Argarwal11 on geeksforgeeks-->
+    <!--link here: https://www.geeksforgeeks.org/how-to-get-multiple-selected-values-of-select-box-in-php/-->
     <form name='sorting_form' id='sorting_form' method='post' action='drinks.php' class="center">
         <label for="sorter">
         <select id='sorter' name ='sortby' class='choice'>
@@ -132,62 +132,62 @@ else {
     </select>
         </label>
     <input class="button1" type='submit' name='sorting_button' value='Sort'>
-</form><br>
+    </form><br>
 
-<!--menu table-->
-<?php
-$count = mysqli_num_rows($result);
-if($count==0) {
-    echo "There was no search results!";
-}
-else{
-    echo"<p class='clickit'> Click on the item to see more details!</p><br>
-                <table class='content-table'>
-                    <tr>
-                        <th> Product</th>
-                        <th> Cost</th>
-                        <th> Status</th>
-                        <th> Popularity</th>
-                    </tr>";
+    <!--menu table-->
+    <?php
+    $count = mysqli_num_rows($result);
+    if($count==0) {
+        echo "There was no search results!";
+    }
+    else{
+        echo"<p class='clickit'> Click on the item to see more details!</p><br>
+                    <table class='content-table'>
+                        <tr>
+                            <th> Product</th>
+                            <th> Cost</th>
+                            <th> Status</th>
+                            <th> Popularity</th>
+                        </tr>";
 
-    while ($row=mysqli_fetch_array($result))
-    {
-        echo ' <tr> 
-                    <!--clickable items that navigate to information page to display details of that chosen item-->
-                    <!--this was adapted from am answer from Ali AlHajjow on stackoverflow-->
-                    <!--link here: https://stackoverflow.com/questions/57936009/navigate-and-pass-values-to-another-page-in-php-html-->
-                    <td><a class="menu-product" href=information.php?product_id='.$row['product_id'].'>'.$row['product'].'</a></td>
-                    <td>'.$row['cost'].'</td>
-                    <td>'.$row['status'].'</td>
-                    <td id="starnum">' .$fullstar = $row['popularities'];
-        $blankstar = 5 - $row['popularities'];
-        $x = 1;
-        while($x <= $fullstar and $x > 0) {
-            echo  '<img id="star" src="img/fullstar.png" alt="filled star icon"/>';
-            $x++; }
+        while ($row=mysqli_fetch_array($result))
+        {
+            echo ' <tr> 
+                   <!--clickable items that navigate to information page to display details of that chosen item-->
+                   <!--this was adapted from am answer from Ali AlHajjow on stackoverflow-->
+                   <!--link here: https://stackoverflow.com/questions/57936009/navigate-and-pass-values-to-another-page-in-php-html-->
+                   <td><a class="menu-product" href=information.php?product_id='.$row['product_id'].'>'.$row['product'].'</a></td>
+                   <td>'.$row['cost'].'</td>
+                   <td>'.$row['status'].'</td>
+                        
+                   <!--prints star rating-->
+                   <td id="starnum">' .$fullstar = $row['popularities'];
+                   $blankstar = 5 - $row['popularities'];
+                   $x = 1;
+                   while($x <= $fullstar and $x > 0) {
+                        echo  '<img id="star" src="img/fullstar.png" alt="filled star icon"/>';
+                        $x++; }
 
-        $x = 1;
-        while ($x <= $blankstar and $x > 0) {
-            echo  '<img id="star" src="img/blankstar.png" alt="blank star icon"/>';
-            $x++; }
-        '</td></tr>';
-    }}
-?>
-?>
-</table><br>
+                   $x = 1;
+                   while ($x <= $blankstar and $x > 0) {
+                        echo  '<img id="star" src="img/blankstar.png" alt="blank star icon"/>';
+                        $x++; }'</td>
+               </tr>';
+            }}
+        ?>
+        </table><br>
 
-    <!--star images attribution-->
-    <p class="star_atr"><i><a href="https://icons8.com/icon/60003/star">full star icon by Icons8</a>
-            <a target="_blank" href="https://icons8.com/icon/16101/star">  /  blank star</a> icon by
-            <a target="_blank" href="https://icons8.com">Icons8</a>
-        </i></p><br>
-    
-</main>
+        <!--star images attribution-->
+        <p class="star_atr"><i><a href="https://icons8.com/icon/60003/star">full star icon by Icons8</a>
+        <a target="_blank" href="https://icons8.com/icon/16101/star">  /  blank star</a> icon by
+                <a target="_blank" href="https://icons8.com">Icons8</a>
+            </i></p><br>
+    </main>
 
-<!--footer element-->
-<footer>
-    <p class="footer-content"> © 2021 Jasmine Yip All Rights Reserved</p>
-</footer>
+    <!--footer element-->
+    <footer>
+        <p class="footer-content"> © 2021 Jasmine Yip All Rights Reserved</p>
+    </footer>
 
-</body>
+    </body>
 </html>

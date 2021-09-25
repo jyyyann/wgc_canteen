@@ -15,7 +15,7 @@ if(isset($_GET['specials'])){
     $id=$_GET['specials'];
 }
 
-elseif ($dayofweek == 'SAT' or 'SUN') {
+elseif ($dayofweek=='SAT' or 'SUN') {
     $id = 'MON';
 }
 
@@ -66,10 +66,10 @@ $this_specials_record=mysqli_fetch_assoc($this_specials_result);
 
 <main>
     <h2> WEEKLY SPECIALS </h2>
-    <div class="specials" title="image of hamburger and fries">
+    <div class="specials">
         <p> All Specials are 50% off on their respected day!</p>
         <!--specials form-->
-        <form name='specials_form' id='specials_form' method = 'get' action ='specials.php' class="center">
+        <form name='specials_form' id='specials_form' method='get' action='specials.php' class="center">
             <label for='specials'></label>
             <select id='specials' name='specials' class='choice'>
                 <!--options-->

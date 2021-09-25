@@ -15,15 +15,8 @@ if(isset($_POST['search'])) {
     AND products.status_id=statuses.status_id";
     $result = mysqli_query($con, $search_query);
 }
-/*reprint the menu table*/
-elseif(isset($_POST['all_items'])) {
-    $all_query="SELECT * 
-    FROM products, statuses, categories
-    WHERE products.category_id=categories.category_id
-    AND products.status_id=statuses.status_id";
-    $result=mysqli_query($con,$all_query);
-}
-/*all items are displayed by default*/
+
+/*print all items*/
 else{
     $all_query="SELECT * 
     FROM products, statuses, categories
@@ -69,24 +62,24 @@ else{
         <h2> CATEGORIES</h2>
         <!--shows all items-->
         <form class="menu-fil" method='post' action='browse.php'>
-            <input class="button3" type="submit" name="all_items" value="All Items">
+            <input class="button3" type="submit" value="All Items">
         </form>
 
         <!--category tabs-->
         <form class="menu-fil" method='post' action='drinks.php'>
-            <input class="button1" type="submit" name="drinks_only" value="Drinks">
+            <input class="button1" type="submit" value="Drinks">
         </form>
 
         <form class="menu-fil" method='post' action='sweets.php'>
-            <input class="button1" type="submit" name="sweets_only" value="Sweets">
+            <input class="button1" type="submit" value="Sweets">
         </form>
 
         <form class="menu-fil" method='post' action='savoury.php'>
-            <input class="button1" type="submit" name="savoury_only" value="Savoury">
+            <input class="button1" type="submit" value="Savoury">
         </form>
 
         <form class="menu-fil" method='post' action='snacks.php'>
-            <input class="button1" type="submit" name="snacks_only" value="Snacks">
+            <input class="button1" type="submit" value="Snacks">
         </form>
 
         <!--search bar-->
@@ -103,7 +96,7 @@ else{
 
         <?php
         $count = mysqli_num_rows($result);
-        if($count==0) {
+        if($count==0) /*no matches*/{
             echo "<p>There was no search results!</p>";
         }
         else{
@@ -126,7 +119,8 @@ else{
                     <td><a class="menu-product" href=information.php?product_id='.$row['product_id'].'>'.$row['product'].'</a></td>
                     <td>'.$row['cost'].'</td>
                     <td>'.$row['status'].'</td>
-                    <!--printing star rating-->
+                    
+                    <!--prints star rating-->
                     <td id="starnum">' .$fullstar = $row['popularities'];
                     $blankstar = 5 - $row['popularities'];
                     $x = 1;
@@ -148,7 +142,6 @@ else{
         <a target="_blank" href="https://icons8.com/icon/16101/star">  /  blank star</a> icon by
         <a target="_blank" href="https://icons8.com">Icons8</a>
             </i></p><br>
-
     </main>
 
     <!--footer element-->

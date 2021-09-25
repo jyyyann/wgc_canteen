@@ -7,9 +7,6 @@ if(mysqli_connect_errno()){
 <?php
 /*product query*/
 /*SELECT product_id FROM products*/
-$all_products_query="SELECT product_id, product FROM products";
-$all_products_result=mysqli_query($con, $all_products_query);
-
 if(isset($_GET['product_id'])){
     $id=$_GET['product_id'];
 }else{
@@ -27,7 +24,7 @@ AND products.nf_id=nfs.nf_id";
 $this_product_result=mysqli_query($con, $this_product_query);
 $this_product_record=mysqli_fetch_assoc($this_product_result);
 
-$name = $this_product_record['alt_text'];
+$alt_text = $this_product_record['alt_text'];
 
 $img_query="SELECT * FROM products WHERE products.product_id= '".$id."'";
 $img_result=mysqli_query($con, $img_query);
@@ -83,30 +80,32 @@ $plink = $img_record['plink'];
         <div class="row">
 
         <div class="product-image">
-            <img id="productimage" src="pimg/canteen-internal/<?php echo $image?>.jpg" alt="<?php echo $name?>">
+            <img id="productimage" src="pimg/canteen-internal/<?php echo $image?>.jpg" alt="<?php echo $alt_text?>">
             <p class="attribute2">Photo by <a href="<?php echo $link?>"><?php echo $owner?></a>
                 from <a href="<?php echo $plink?>">Pexels</a></p>
         </div>
 
         <div class="product-info">
-        <!--display of item's information-->
+        <!--display item's information-->
         <?php
         echo "<p class='pi'> Description: ". $this_product_record['description']. "<br>";
         echo "<p class='pi'> Category: ". $this_product_record['category']. "<br>";
         echo "<p class='pi'> Cost: $ ". $this_product_record['cost']. "<br>";
         echo "<p class='pi'> Popularity: "?>
 
+            <!--prints star ratings-->
             <?php $fullstar = $this_product_record['popularities'];
                     $blankstar = 5 - $this_product_record['popularities'];
                     $x = 1;
                     while($x <= $fullstar and $x > 0) {
-                        echo  '<img id="star" src="img/fullstar.png" />';
+                        echo  '<img id="star" src="img/fullstar.png" alt="filled star icon"/>';
                         $x++; }
 
                     $x = 1;
                     while ($x <= $blankstar and $x > 0) {
-                        echo  '<img id="star" src="img/blankstar.png" />';
+                        echo  '<img id="star" src="img/blankstar.png" alt="blank star icon"/>';
                         $x++; }?>
+
         <?php
         echo "<p class='pi'> Status: ". $this_product_record['status']. "<br>";
         echo "<p class='pi'> Calories: ". $this_product_record['calories']. " kcal<br>";

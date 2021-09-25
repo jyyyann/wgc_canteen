@@ -10,6 +10,7 @@ if (isset($_POST['sorting_button'])) {
     if (isset($_POST['sortby'])) {
         $sort = $_POST['sortby'];
     }
+    /*displays all savoury items*/
     if ($sort == 'all_savoury') {
         $all_savoury_query = "SELECT * 
             FROM products, statuses, categories
@@ -18,6 +19,7 @@ if (isset($_POST['sorting_button'])) {
             AND products.status_id=statuses.status_id";
         $result = mysqli_query($con, $all_savoury_query);
 
+        /*shows most popular savoury items first*/
     } elseif ($sort == 'pop_desc') {
         $pop_asc_query = "SELECT * 
             FROM products, statuses, categories 
@@ -27,6 +29,7 @@ if (isset($_POST['sorting_button'])) {
             ORDER BY products.popularities DESC";
         $result = mysqli_query($con, $pop_asc_query);
 
+        /*shows cheapest savoury items first*/
     } elseif ($sort == 'cost_asc') {
         $cost_asc_query = "SELECT * 
             FROM products, statuses, categories
@@ -36,6 +39,7 @@ if (isset($_POST['sorting_button'])) {
             ORDER BY products.cost ASC";
         $result = mysqli_query($con, $cost_asc_query);
 
+        /*shows available savoury items only*/
     } elseif ($sort == 'available_only') {
         $available_only_query = "SELECT * 
             FROM products, statuses, categories 
@@ -45,7 +49,7 @@ if (isset($_POST['sorting_button'])) {
             AND products.status_id=statuses.status_id";
         $result = mysqli_query($con, $available_only_query);}
 
-} /*print whole menu by default*/
+} /*print all savoury items by default*/
 else {
     $savoury_only_query = "SELECT *
     FROM products, statuses, categories
@@ -91,24 +95,24 @@ else {
     <h2> CATEGORIES</h2>
     <!--shows all items-->
     <form class="menu-fil" method='post' action='browse.php'>
-        <input class="button1" type="submit" name="all_items" value="All Items">
+        <input class="button1" type="submit" value="All Items">
     </form>
     
     <!--category tabs-->
     <form class="menu-fil" method='post' action='drinks.php'>
-        <input class="button1" type="submit" name="drinks_only" value="Drinks">
+        <input class="button1" type="submit" value="Drinks">
     </form>
 
     <form class="menu-fil" method='post' action='sweets.php'>
-        <input class="button1" type="submit" name="sweets_only" value="Sweets">
+        <input class="button1" type="submit" value="Sweets">
     </form>
 
     <form class="menu-fil" method='post' action='savoury.php'>
-        <input class="button3" type="submit" name="savoury_only" value="Savoury">
+        <input class="button3" type="submit" value="Savoury">
     </form>
 
     <form class="menu-fil" method='post' action='snacks.php'>
-        <input class="button1" type="submit" name="snacks_only" value="Snacks">
+        <input class="button1" type="submit" value="Snacks">
     </form>
 
     <h2> SAVOURY</h2>
@@ -137,8 +141,7 @@ else {
         echo "There was no search results!";
     }
     else{
-        echo"<!--menu table-->
-                <p class='clickit'> Click on the item to see more details!</p><br>
+        echo"<p class='clickit'> Click on the item to see more details!</p><br>
                 <table class='content-table'>
                     <tr>
                         <th> Product</th>
@@ -157,20 +160,20 @@ else {
                     <td>'.$row['cost'].'</td>
                     <td>'.$row['status'].'</td>
                     <td id="starnum">' .$fullstar = $row['popularities'];
-            $blankstar = 5 - $row['popularities'];
-            $x = 1;
-            while($x <= $fullstar and $x > 0) {
-                echo  '<img id="star" src="img/fullstar.png" alt="filled star icon"/>';
-                $x++; }
+                    $blankstar = 5 - $row['popularities'];
+                    $x = 1;
+                    while($x <= $fullstar and $x > 0) {
+                        echo  '<img id="star" src="img/fullstar.png" alt="filled star icon"/>';
+                        $x++; }
 
-            $x = 1;
-            while ($x <= $blankstar and $x > 0) {
-                echo  '<img id="star" src="img/blankstar.png" alt="blank star icon"/>';
-                $x++; }
-            '</td></tr>';
-        }}
-    ?>
-    </table><br>
+                    $x = 1;
+                    while ($x <= $blankstar and $x > 0) {
+                        echo  '<img id="star" src="img/blankstar.png" alt="blank star icon"/>';
+                        $x++; }'</td>
+                    </tr>';
+                }}
+            ?>
+            </table><br>
 
     <!--star images attribution-->
     <p class="star_atr"><i><a href="https://icons8.com/icon/60003/star">full star icon by Icons8</a>
