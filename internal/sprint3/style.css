@@ -272,9 +272,9 @@ a.menu-product:hover{
 
 /*search bar magnifying lens*/
 .searchlens{
-    background : url("img/maglens2.jpg") no-repeat center center;
-    width : 25px;
-    height: 25px;
+    background : url("img/searchicon2.png") no-repeat center center;
+    width : 28px;
+    height: 28px;
     background-size: 100% 100%;
     padding: 8px 8px 0;
     border : none;
