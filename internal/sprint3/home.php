@@ -40,7 +40,7 @@ if(mysqli_connect_errno()){
 <main>
     <div class="about-us">
         <h2> ABOUT US</h2>
-        <p> Welcome to Wellington Girls' College Canteen! We opened since the beginning of the century.
+        <p class="about-us"> Welcome to Wellington Girls' College Canteen! We opened since the beginning of the century.
             We strive to deliver quality food with reasonable price to our students. We update our menu frequently
             to make sure we have got the most well-liked items for you all.
             Check out our menu to see a wide range of food and drinks available. There has got to be something for you!</p>
