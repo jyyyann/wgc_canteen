@@ -14,12 +14,13 @@ if(isset($_GET['product_id'])){
 }
 
 $this_product_query="SELECT *
-FROM products, statuses, categories,vegans, gfs, nfs
+FROM products, statuses, categories,vegans, gfs, dfs, nfs
 WHERE products.product_id='".$id."'
 AND products.status_id=statuses.status_id
 AND products.category_id=categories.category_id
 AND products.vegan_id=vegans.vegan_id
 AND products.gf_id=gfs.gf_id
+AND products.df_id=dfs.df_id
 AND products.nf_id=nfs.nf_id";
 $this_product_result=mysqli_query($con, $this_product_query);
 $this_product_record=mysqli_fetch_assoc($this_product_result);
@@ -111,6 +112,7 @@ $plink = $img_record['plink'];
         echo "<p class='pi'> Calories: ". $this_product_record['calories']. " kcal<br>";
         echo "<p class='pi'> Vegan: ". $this_product_record['vegan']. "<br>";
         echo "<p class='pi'> Gluten Free: ". $this_product_record['gf']. "<br>";
+        echo "<p class='pi'> Dairy Free: ". $this_product_record['df']. "<br>";
         echo "<p class='pi'> Nut Free: ". $this_product_record['nf']. "<br><br>";
         ?>
         </div>
