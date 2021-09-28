@@ -11,16 +11,18 @@ date_default_timezone_set('Pacific/Auckland');
 $day = strftime("%a");
 $dayofweek = strtoupper($day);
 
-if(isset($_GET['specials'])){
+if(empty($_GET['specials'])){
+    if ($dayofweek =='SUN' or $dayofweek =='SAT') {
+        $id = 'MON';
+    }
+
+    else {
+        $id = $dayofweek;
+    }
+}
+
+elseif (isset($_GET['specials'])){
     $id=$_GET['specials'];
-}
-
-elseif ($dayofweek=='SAT' or 'SUN') {
-    $id = 'MON';
-}
-
-else {
-    $id=$dayofweek;
 }
 
 $this_specials_query="SELECT specials.day, products.product, products.cost, categories.category, statuses.status, products.description
