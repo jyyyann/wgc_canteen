@@ -16,15 +16,14 @@ $all_products_result=mysqli_query($con, $all_products_query);
 if(isset($_GET['item'])){
     $id=$_GET['item'];
 }else{
-    $id=1;
+    $id='AFG';
 }
 
 $this_product_query="SELECT *
-FROM products, statuses, categories,popularities, vegans, gfs, nfs
+FROM products, statuses, categories, vegans, gfs, nfs
 WHERE products.product_id='".$id."'
 AND products.status_id=statuses.status_id
 AND products.category_id=categories.category_id
-AND products.popularity_id=popularities.popularity_id
 AND products.vegan_id=vegans.vegan_id
 AND products.gf_id=gfs.gf_id
 AND products.nf_id=nfs.nf_id";
@@ -79,7 +78,6 @@ $this_product_record=mysqli_fetch_assoc($this_product_result);
         echo "<p class='description'>". $this_product_record['description']. "<br><br>";
         echo "<p> Category: ". $this_product_record['category']. "<br>";
         echo "<p> Cost: ". $this_product_record['cost']. "<br>";
-        echo "<p> Popularity: ". $this_product_record['popularity']. "<br>";
         echo "<p> Status: ". $this_product_record['status']. "<br><br>";
         ?>
 
