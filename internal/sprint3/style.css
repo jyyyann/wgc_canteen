@@ -213,9 +213,14 @@ a.menu-product{
     text-decoration: none;
 }
 
-a.menu-product:hover{
+a.specials-product{
+    font-family: 'Montserrat', sans-serif;
+    color: dimgrey;
+}
+
+a.menu-product:hover, a.specials-product:hover{
     color: #3BC5CC;
-    }
+}
 
 /*buttons*/
 /*black buttons*/
@@ -331,16 +336,16 @@ input[type="text"]{
     font-size: 0;
 }
 
-#star{
+#star, #clickme{
     max-width: 20px;
     height: auto;
 }
 
-.star_atr{
+.star_atr, .clickme_atr{
     font-size: 14px;
 }
 
-.star_atr a{
+.star_atr a, .clickme_atr a{
     color: dimgrey;
 }
 
